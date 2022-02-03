@@ -14014,10 +14014,10 @@ $$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>The consequence is that</strong> $\operatorname{var}\left[\hat\beta_{O L S} \mid X\right]\neq \sigma^{2}\left(X^{\prime} X\right)^{-1}$
+<p><strong>The consequence is that</strong> $\operatorname{var}\left[\mathbf{b}_{O L S} \mid X\right]\neq \sigma^{2}\left(X^{\prime} X\right)^{-1}$
 $$
 \begin{aligned}
-\operatorname{var}\left[\hat\beta_{O L S} \mid X\right] &amp;=\mathbb{E}\left[\left(\hat\beta_{O L S}-\mathbb{E}\left[\hat\beta_{O L S} \mid X\right]\right)\left(\hat\beta_{O L S}-\mathbb{E}\left[\hat\beta_{O L S} \mid X\right]\right)^{\prime} \mid X\right] \\
+\operatorname{var}\left[\mathbf{b}_{O L S} \mid X\right] &amp;=\mathbb{E}\left[\left(\mathbf{b}_{O L S}-\mathbb{E}\left[\mathbf{b}_{O L S} \mid X\right]\right)\left(\mathbf{b}_{O L S}-\mathbb{E}\left[\mathbf{b}_{O L S} \mid X\right]\right)^{\prime} \mid X\right] \\
 &amp;=\mathbb{E}\left[\left(X^{\prime} X\right)^{-1} X^{\prime} \varepsilon \varepsilon^{\prime} X\left(X^{\prime} X\right)^{-1} \mid X\right] \\
 &amp;=\left(X^{\prime} X\right)^{-1} X^{\prime} \mathbb{E}\left[\varepsilon \varepsilon^{\prime} \mid X\right] X\left(X^{\prime} X\right)^{-1} \\
 &amp;=\left(X^{\prime} X\right)^{-1} X^{\prime}\sigma^2\Omega  X\left(X^{\prime} X\right)^{-1}
@@ -14058,7 +14058,7 @@ $$
 $$<p>The OLS estimator of $\beta$ for the transformed model is:
 $$
 \begin{aligned}
-\hat\beta_{\mathrm{GLS}} &amp;=\left(X_{*}' X_{*}\right)^{-1} X_{*}' y_{*} \\
+\mathbf{b}_{\mathrm{GLS}} &amp;=\left(X_{*}' X_{*}\right)^{-1} X_{*}' y_{*} \\
 &amp;=\left[({C X})^{\prime}({C X})\right]^{-1}({C X})^{\prime}({C} {y})\\
 &amp;=\left(X^{\prime} C^{\prime} C X\right)^{-1} X^{\prime} C^{\prime} C y \\
 &amp;=\left(X^{\prime} \Omega^{-1} X\right)^{-1} X^{\prime} \Omega^{-1} y
@@ -14067,7 +14067,7 @@ $$</p>
 <p>And
 $$
 \begin{aligned}
-\operatorname{var}\left(\hat\beta_{\mathrm{GLS}}\right) &amp;=\sigma^{2}\left(\boldsymbol{X}_{*}^{\prime} \boldsymbol{X}_{*}\right)^{-1} \\
+\operatorname{var}\left(\mathbf{b}_{\mathrm{GLS}}\right) &amp;=\sigma^{2}\left(\boldsymbol{X}_{*}^{\prime} \boldsymbol{X}_{*}\right)^{-1} \\
 &amp;=\sigma^{2}\left(X^{\prime} C^{\prime} C X\right)^{-1}\\
 &amp;=\sigma^{2}\left(\boldsymbol{X}^{\prime} \boldsymbol{\Omega}^{-1} \boldsymbol{X}\right)^{-1}
 \end{aligned}

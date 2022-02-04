@@ -14089,7 +14089,8 @@ $$</p>
 <p>If $\sigma^{12}=\sigma^{21}=0$ then</p>
 $$
 \mathbf{b}_{S U R}=\left[\begin{array}{cc}\sigma^{11} \mathbf{X}_{1}^{\prime} \mathbf{X}_{1} &amp; 0 \\ 0_{1} &amp; \sigma^{22} \mathbf{X}_{2}^{\prime} \mathbf{X}_{2}\end{array}\right]^{-1}\left[\begin{array}{l}\sigma^{11} \mathbf{X}_{1}^{\prime} \mathbf{y}_{1} \\ \sigma^{22} \mathbf{X}_{2}^{\prime} \mathbf{y}_{2}\end{array}\right]=\left[\begin{array}{l}\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right)^{-1} \mathbf{X}_{1}^{\prime} \mathbf{y}_{1} \\ \left(\mathbf{X}_{2}^{\prime} \mathbf{X}_{2}\right)^{-1} \mathbf{X}_{2}^{\prime} \mathbf{y}_{2}\end{array}\right]
-$$<ul>
+$$<p><strong>This implies</strong></p>
+<ul>
 <li><p><strong>If the models are unrelated, then the GLS/SUR estimator is identical to OLS on each of the two models.</strong></p>
 </li>
 <li><p><strong>No efficiency gain, or improved inference, from using SUR/GLS.</strong></p>
@@ -14100,7 +14101,7 @@ $$<ul>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Consider the case that the two models have the same regressors:</strong> $$\mathbf{X}_{1}=\mathbf{X}_{2}$$</p>
+<p><strong>Now let's consider the case that the two models have the same regressors:</strong> $$\mathbf{X}_{1}=\mathbf{X}_{2}$$</p>
 $$
 \begin{aligned}
 \mathbf{b}_{S U R}=&amp;\left[\begin{array}{ll}
@@ -14128,10 +14129,11 @@ $$
 $$
 \mathbf{b}_{j}=\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right)^{-1} \mathbf{X}_{1}^{\prime} \mathbf{y}_{j}, \quad j=1,2
 $$
-since $\mathbf{X}_{2}=\mathbf{X}_{2}$, implying
+since $\mathbf{X}_{2}=\mathbf{X}_{1}$, implying
+$\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right) \mathbf{b}_{j}=\mathbf{X}_{j}^{\prime} \mathbf{y}_{j}$</p>
+<p>So we can subsitute for $\mathbf{X}_{j}^{\prime} \mathbf{y}_{j}$ in the equation above resulting in:</p>
 $$
 \begin{aligned}
-&amp;\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right) \mathbf{b}_{j}=\mathbf{X}_{j}^{\prime} \mathbf{y}_{j} \\
 \mathbf{b}_{S U R}=&amp;\left[\Sigma \otimes\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right)^{-1}\right]\left[\begin{array}{l}
 \mathbf{X}_{1}^{\prime} \mathbf{X}_{1} \sigma^{11} \mathbf{b}_{1}+\sigma^{12} \mathbf{X}_{1}^{\prime} \mathbf{X}_{1} \mathbf{b}_{2} \\
 \mathbf{X}_{1}^{\prime} \mathbf{X}_{1} \sigma^{21} \mathbf{b}_{1}+\sigma^{22} \mathbf{X}_{1}^{\prime} \mathbf{X}_{1} \mathbf{b}_{2}
@@ -14152,15 +14154,14 @@ $$
 \mathbf{b}_{1}\left(\sigma_{21} \sigma^{11}+\sigma_{2}^{2} \sigma^{21}\right)+\mathbf{b}_{2}\left(\sigma_{21} \sigma^{12}+\sigma_{2}^{2} \sigma^{22}\right)
 \end{array}\right]
 \end{aligned}
-$$</p>
-
+$$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Write out
+<p>The terms in the parentheses involving $\sigma$'s simplify to 1's and 0's. To see this write out
 $$
-\Sigma \Sigma^{-1}=1
+\Sigma \Sigma^{-1}=\mathbf{I}
 $$
 as
 $$
@@ -14168,11 +14169,16 @@ $$
 {\left[\begin{array}{cc}
 \sigma_{1}^{2} &amp; \sigma_{12} \\
 \sigma_{21} &amp; \sigma_{2}^{2}
-\end{array}\right]\left[\begin{array}{cc}
+\end{array}\right]
+\left[\begin{array}{cc}
 \sigma^{11} &amp; \sigma^{12} \\
 \sigma^{21} &amp; \sigma^{22}
-\end{array}\right]=\mathbf{I}} \\
-\left(\sigma_{1}^{2} \sigma^{11}+\sigma_{12} \sigma^{21}\right)=1 \\
+\end{array}\right]=\mathbf{I}=
+\left[\begin{array}{cc}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right]} \\
+\left(\sigma_{1}^{2} \sigma^{11}+\sigma_{12} \sigma^{21}\right) = 1\\
 \sigma_{1}^{2} \sigma^{12}+\sigma_{12} \sigma^{22}=0 \\
 \left(\sigma_{21} \sigma^{11}+\sigma_{2}^{2} \sigma^{21}=0\right. \\
 \sigma_{21} \sigma^{12}+\sigma_{2}^{2} \sigma^{22}=1
@@ -14204,16 +14210,9 @@ in the case of identical regressors $\mathbf{X}_{1}=\mathbf{X}_{2}$.</p>
 <li><p>It also has practical importance. Often, from theory, the regressors are the same for all equations. As a specific example, the system below might represent a set of demand functions for the population of families in a country:
 $$
 \begin{aligned}
-\text { housing }=&amp; \beta_{10}+\beta_{11} \text { houseprc }+\beta_{12} \text { foodprc }+\beta_{13} \text { clothprc }+\beta_{14} \text { income } \\
-&amp;+\beta_{15} \text { size }+\beta_{16} \text { age }+u_{1} \text {. }
-\end{aligned}
-$$
-$$
-\begin{aligned}
-f o o d=&amp; \beta_{20}+\beta_{21} \text { houseprc }+\beta_{22} \text { foodprc }+\beta_{23} \text { clothprc }+\beta_{24} \text { income } \\
-&amp;+\beta_{25} \text { size }+\beta_{26} \text { age }+u_{2} \text {. } \\
-\text { clothing }=&amp; \beta_{30}+\beta_{31} \text { houseprc }+\beta_{32} \text { foodprc }+\beta_{33} \text { clothprc }+\beta_{34} \text { income } \\
-&amp;+\beta_{35} \text { size }+\beta_{36} \text { age }+u_{3} \text {. }
+housing =&amp; \beta_{10}+\beta_{11} \text { houseprc }+\beta_{12} \text { foodprc }+\beta_{13} \text { clothprc }+\beta_{14} \text { income } +\beta_{15} \text { size }+\beta_{16} \text { age }+u_{1} \text {. }\\
+food=&amp; \beta_{20}+\beta_{21} \text { houseprc }+\beta_{22} \text { foodprc }+\beta_{23} \text { clothprc }+\beta_{24} \text { income } +\beta_{25} \text { size }+\beta_{26} \text { age }+u_{2} \text {. } \\
+clothing=&amp; \beta_{30}+\beta_{31} \text { houseprc }+\beta_{32} \text { foodprc }+\beta_{33} \text { clothprc }+\beta_{34} \text { income } +\beta_{35} \text { size }+\beta_{36} \text { age }+u_{3} \text {. }
 \end{aligned}
 $$</p>
 </li>
@@ -14223,7 +14222,7 @@ $$</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Supplementary: The M case equation with identical regressors</strong></p>
+<p><strong>Supplementary: The case of M equations with identical regressors</strong></p>
 <p>Now $\mathbf{X}_{j} \equiv \mathbf{X}_{0}$ for some $N \times K^{*}$ matrix $\mathbf{X}_{0}$, with $K^{*}=K / M$. Here the stacked matrix $\mathbf{X}$ takes the form
 $$
 \begin{aligned}
@@ -14236,7 +14235,7 @@ $$
 &amp;=\left(\mathbf{I}_{M} \otimes \mathbf{X}_{0}\right)
 \end{aligned}
 $$
-and the GLS estimator also reduces to classical LS:
+and the GLS estimator also reduces to classical OLS:
 $$
 \begin{aligned}
 {\mathbf{b}}_{S U R} &amp;=\left(\mathbf{X}^{\prime}\left(\boldsymbol{\Sigma} \otimes \mathbf{I}_{N}\right)^{-1} \mathbf{X}\right)^{-1} \mathbf{X}^{\prime}\left(\boldsymbol{\Sigma} \otimes \mathbf{I}_{N}\right)^{-1} \mathbf{y} \\

@@ -14058,7 +14058,7 @@ for the (stacked) disturbance vector in the regression model
 $$
 \mathbf{y}=\mathbf{X} \boldsymbol{\beta}+\varepsilon \text {. }
 $$</p>
-<p>See Greene Appendix if you're unfamiliar with <a href="http://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf">Kronecker Products</a></p>
+<p>See Greene Appendix if you're unfamiliar with <a href="http://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf#page=24">Kronecker Products</a></p>
 
 </div>
 </div>
@@ -14125,6 +14125,10 @@ $$
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In the last step we used the Kronecker Product property <a href="http://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf#page=24">A-76</a>
+$$
+(\mathbf{A} \otimes \mathbf{B})^{-1}=\left(\mathbf{A}^{-1} \otimes \mathbf{B}^{-1}\right)
+$$</p>
 <p>If OLS is applied on each model then
 $$
 \mathbf{b}_{j}=\left(\mathbf{X}_{1}^{\prime} \mathbf{X}_{1}\right)^{-1} \mathbf{X}_{1}^{\prime} \mathbf{y}_{j}, \quad j=1,2
@@ -14205,7 +14209,7 @@ in the case of identical regressors $\mathbf{X}_{1}=\mathbf{X}_{2}$.</p>
 </li>
 <li><p>The result that $\mathbf{b}_{S U R}=\mathbf{b}_{O L S}$ when disturbances are not correlated between equations is intuitive</p>
 </li>
-<li><p>But the result that $\mathbf{b}_{S U R}=\mathbf{b}_{O L S}$ in the case of identical regressors, even though disturbances are correlated, is truly mind boggelig!</p>
+<li><p>But the result that $\mathbf{b}_{S U R}=\mathbf{b}_{O L S}$ in the case of identical regressors, even though disturbances are correlated, is truly mind boggling!</p>
 </li>
 <li><p>It also has practical importance. Often, from theory, the regressors are the same for all equations. As a specific example, the system below might represent a set of demand functions for the population of families in a country:
 $$

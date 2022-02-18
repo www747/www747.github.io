@@ -15297,10 +15297,8 @@ These covariates are defined as follows:</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>While columns (2) and (3) recap the entity and the entity-and-time fixed effects results we've seen earlier, column (1) presents an estimate of the coefficient of interest in the naive OLS regression of the fatality rate on beer tax without any fixed effects. We obtain a positive estimate for the coefficient on beer tax that is likely to be upward biased. The model fit is rather bad, too ( $\bar{R}^{2}=0.091$ ). The sign of the estimate changes as we extend the model by both entity and time fixed effects in models (2) and (3). Furthermore $\bar{R}^{2}$ increases substantially as fixed effects are included in the model equation. Nonetheless, as discussed before, the magnitudes of both estimates may be too large.
 The model specifications (4) to (7) include covariates that capture the effect of overall state economic conditions as well as the legal framework. Considering (4) as the baseline specification, we observe four interesting results:</p>
-<ol>
-<li>Including the covariates does not lead to a major reduction of the estimated effect of the beer tax. The coefficient is not significantly different from zero at the level of $5 \%$ as the estimate is rather imprecise.</li>
-<li>The minimum legal drinking age does not have an effect on traffic fatalities: none of the three dummy variables are significantly different from zero at any common level of significance. Moreover, an $F$-Test of the joint hypothesis that all three coefficients are zero does not reject. The next code chunk shows how to test this hypothesis.</li>
-</ol>
+<p>1.Including the covariates does not lead to a major reduction of the estimated effect of the beer tax. The coefficient is not significantly different from zero at the level of $5 \%$ as the estimate is rather imprecise.</p>
+<p>2.The minimum legal drinking age does not have an effect on traffic fatalities: none of the three dummy variables are significantly different from zero at any common level of significance. Moreover, an $F$-Test of the joint hypothesis that all three coefficients are zero does not reject. The next code chunk shows how to test this hypothesis.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15353,10 +15351,8 @@ The model specifications (4) to (7) include covariates that capture the effect o
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>There is no evidence that punishment for first offenders has a deterring effects on drunk driving: the corresponding coefficient is not significant at the $10 \%$ level.</li>
-<li>The economic variables significantly explain traffic fatalities. We can check that the employment rate and per capita income are jointly significant at the level of $0.1 \%$.</li>
-</ol>
+<p>3.There is no evidence that punishment for first offenders has a deterring effects on drunk driving: the corresponding coefficient is not significant at the $10 \%$ level.</p>
+<p>4.The economic variables significantly explain traffic fatalities. We can check that the employment rate and per capita income are jointly significant at the level of $0.1 \%$.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">

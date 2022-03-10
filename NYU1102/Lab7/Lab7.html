@@ -14319,8 +14319,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Based on the manual regression we can see the coefficient for the lagged series L(test.ts) is significant at the 5% level (t value of -1.9901) therefore pointing to a unit root in the time series.</p>
-<p>Now let's check against prepackaged ADF test function in URCA package:</p>
+<p>Based on the manual regression we can see the coefficient for the lagged series L(test.ts) is significant at the 5% level (t value of -1.9901) therefore pointing to a unit root in the time series. HOWEVER, OLS t-statistics are invalid here so we would need to find critical values from relevant Dickey Fuller statistic tables.  Econometric software packages have the proper critical values built in.</p>
+<p>For example, let's check our results against the prepackaged ADF test function in the URCA package:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">

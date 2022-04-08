@@ -14260,7 +14260,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Logit">Logit<a class="anchor-link" href="#Logit">¶</a></h3><p>The link function used in logistic is based on the binomial distribution and is known as logit. To understand logit we need to first understand odds (odds ratios).</p>
+<h3 id="Logit">Logit<a class="anchor-link" href="#Logit">¶</a></h3><p>The link function used in logistic regression is based on the binomial distribution and is known as logit. To understand logit we need to first understand odds (odds ratios).</p>
 <h4 id="From-probability-to-odds-to-log-of-odds">From probability to odds to log of odds<a class="anchor-link" href="#From-probability-to-odds-to-log-of-odds">¶</a></h4><p>Everything starts with the concept of probability.  Let’s say that the probability of success of some event is .8.  Then the probability of failure is 1 – .8 = .2.  The odds of success are defined as the ratio of the probability of success over the probability of failure.  In our example, the odds of success are .8/.2 = 4.  That is to say that the odds of success are  4 to 1.  If the probability of success is .5, i.e., 50-50 percent chance, then the odds of success is 1 to 1.</p>
 <p>For another example, consider dice: the probability of rolling a 3 is 1/6. But the odds of rolling a 3 is 1 to 5 or 1/5.</p>
 <p>The table below shows the relationship between probability, odds and log of odds.</p>
@@ -14293,12 +14293,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">modelsummary</span><span class="p">(</span><span class="n">logit_glm</span> <span class="p">,</span><span class="n">title</span> <span class="o">=</span><span class="s">"Logit (LogOdds)"</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s">"%.3f"</span><span class="p">,</span><span class="n">stars</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> 
+<div class=" highlight hl-r"><pre><span></span><span class="nf">modelsummary</span><span class="p">(</span><span class="n">logit_glm</span> <span class="p">,</span><span class="n">title</span> <span class="o">=</span><span class="s">"Logit (LogOdds)"</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s">"%.3f"</span><span class="p">,</span><span class="n">stars</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> 
              <span class="n">exponentiate</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span><span class="n">group</span> <span class="o">=</span> <span class="n">model</span> <span class="o">~</span> <span class="n">term</span><span class="p">,</span> 
              <span class="n">gof_omit</span> <span class="o">=</span> <span class="s">".*"</span>
              <span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">as.character</span> <span class="o">%&gt;%</span> <span class="n">IRdisplay</span><span class="o">::</span><span class="nf">display_html</span><span class="p">()</span>
 
-<span class="nf">modelsummary</span><span class="p">(</span><span class="n">logit_glm</span> <span class="p">,</span><span class="n">title</span> <span class="o">=</span><span class="s">"Exponentiated Logit (Odds)"</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s">"%.3f"</span><span class="p">,</span><span class="n">stars</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span> 
+<span class="nf">modelsummary</span><span class="p">(</span><span class="n">logit_glm</span> <span class="p">,</span><span class="n">title</span> <span class="o">=</span><span class="s">"Exponentiated Logit (Odds)"</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s">"%.3f"</span><span class="p">,</span><span class="n">stars</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> 
              <span class="n">exponentiate</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span><span class="n">group</span> <span class="o">=</span> <span class="n">model</span> <span class="o">~</span> <span class="n">term</span><span class="p">,</span> 
              <span class="n">gof_omit</span> <span class="o">=</span> <span class="s">".*"</span><span class="p">,</span><span class="n">statistic</span> <span class="o">=</span> <span class="s">"t = {statistic}"</span>
              <span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">as.character</span> <span class="o">%&gt;%</span> <span class="n">IRdisplay</span><span class="o">::</span><span class="nf">display_html</span><span class="p">()</span>
@@ -14425,7 +14425,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Looking at the <em>kidslt6</em> coefficient, this tells that that an increase of 1 in the independent variable is associated with odds changing by a factor of 0.236.  If we evaluate at the mean, i.e. odds = 1 this means a change in probability of:</p>
+<p>Looking at the <em>kidslt6</em> coefficient, this tells us that an increase of 1 in the independent variable is associated with odds changing by a factor of 0.236.  If we evaluate at the mean, i.e. odds = 1 this means a change in probability of:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">

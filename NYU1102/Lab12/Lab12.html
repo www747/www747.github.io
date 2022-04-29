@@ -14985,7 +14985,7 @@ complexity it adds (this is called pruning).</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">my.bag</span> <span class="o">&lt;-</span> <span class="nf">randomForest</span><span class="p">(</span><span class="n">LogSalary</span> <span class="o">~</span> <span class="n">Years</span> <span class="o">+</span> <span class="n">Hits</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my.df.train</span><span class="p">,</span>
-    <span class="n">mtry</span> <span class="o">=</span> <span class="p">(</span><span class="nf">ncol</span><span class="p">(</span><span class="n">my.df.train</span><span class="p">)</span><span class="m">-1</span><span class="p">),</span> <span class="n">ntree</span> <span class="o">=</span> <span class="m">5000</span><span class="p">)</span>
+    <span class="n">mtry</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">ntree</span> <span class="o">=</span> <span class="m">5000</span><span class="p">)</span>
 
 <span class="n">my.bag.predict</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">my.bag</span><span class="p">,</span> <span class="n">my.df.test</span><span class="p">)</span>
 <span class="n">MSE.bag</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">((</span><span class="n">my.bag.predict</span> <span class="o">-</span> <span class="n">my.df.test</span><span class="o">$</span><span class="n">LogSalary</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
@@ -15031,6 +15031,8 @@ complexity it adds (this is called pruning).</p>
 <h3 id="Learning-More">Learning More<a class="anchor-link" href="#Learning-More">¶</a></h3><p>To learn more I would start with the following resources listed in order of complexity:</p>
 <ul>
 <li><p><a href="http://www-bcf.usc.edu/~gareth/ISL/">An Introduction to Statistical Learning</a></p>
+</li>
+<li><p><a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">StatQuest videos</a></p>
 </li>
 <li><p><a href="http://appliedpredictivemodeling.com/">Applied Predictive Modeling</a></p>
 </li>

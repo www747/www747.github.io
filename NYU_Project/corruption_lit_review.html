@@ -13089,7 +13089,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "398px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "300px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13116,7 +13116,8 @@ $( document ).ready(function(){
 <li>Survey the existing literature on the causes of corruption</li>
 <li>Focus on empirical research using international comparisons: tabulate estimates of best predictors, effect direction and size</li>
 <li>Highlight prior research focused on relationship between the 6 core variables (Statehood??TBD, Growth, Corruption, Education, EIU??TBD, Inequality)  </li>
-<li>TBD: what about resources, trade, urban, services, industrial</li>
+<li>Highlight other important drivers of corruption</li>
+<li>Keep track of potential improvements to the econometric model specification</li>
 </ul>
 <h2 id="Definition">Definition<a class="anchor-link" href="#Definition">&#182;</a></h2><p>One of the most widely accepted definitions to date claims that corruption establishes practices of illegal payments to public agents to obtain benefits that may not be deserved, or the abuse of public offices for private gains (Klitgaard, 1988; Rose-Ackerman, 1996; Shleifer and Vishny, 1993).</p>
 <h2 id="Measures">Measures<a class="anchor-link" href="#Measures">&#182;</a></h2><p>By its very nature, corruption leaves scant identifiable traces, which creates a serious puzzle for scholars. The principal approach to measuring corruption has been based on perception indexes built upon expert or public opinion (Mauro, 1995). Measuring corruption by assessing how societies perceive it became recognized as a valid method when employing the Transparency International Corruption Perception Index (Lambsdorff, 2003) and the governance indicators of the World Bank (Kaufmann, Kraay,  Mastruzzi, 2009). Recent developments in testing have improved the validity of subjective measures of corruption based on perception indexes. Mocan (2008) and Razafindrakoto and Roubaud (2010) suggest that expert opinions, such as those used by Transparency International, to assess corruption levels in countries may fail to approximate potential results to the ones obtained by using objective measures. Along these lines, Olken (2007), Donchev and Ujhelyi (2008), and Razafindrakoto and Roubaud (2010) question corruption perception as a valid measure by elaborating on potential threats to validity associated with it.</p>
@@ -13130,7 +13131,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Causes-of-corruption">Causes of corruption<a class="anchor-link" href="#Causes-of-corruption">&#182;</a></h2><p>Note: A plus (minus) sign indicates that the relationship between corruption and its respective cause was found to be positive (negative). An asterisk (*) denotes that a cited study considers multiple countries, lack of one notes that the study only assessed one nation.</p>
+<h2 id="Overview:-causes-of-corruption">Overview: causes of corruption<a class="anchor-link" href="#Overview:-causes-of-corruption">&#182;</a></h2><p>Note: A plus (minus) sign indicates that the relationship between corruption and its respective cause was found to be positive (negative). An asterisk (*) denotes that a cited study considers multiple countries, lack of one notes that the study only assessed one nation.</p>
 <ul>
 <li><strong>Bureaucracy and inefficient administrative and political structure:</strong> Tanzi, $1998(+)^{*}$; Kaufman and Wei, $1999(+)^{*}$; <a href="https://core.ac.uk/download/pdf/6659495.pdf">Goel and Nelson, $2010^{*}(+)$(OLS)</a></li>
 <li><strong>Civil participation/press freedom:</strong> Treisman, $2000(-)^{*}$; Bhattacharyya and Hodler, $2015(-)^{*}$</li>
@@ -13163,19 +13164,7 @@ $(-)^{*} ;$ Badinger and Nindl, $2014(-)^{*}$</li>
 <li><strong>Urbanization:</strong> Meier and Holbrook, $1992(+)$; Goel and Nelson, $2010(-)^{*}$</li>
 <li><strong>Wages:</strong> Van Rijckeghem and Weder, $1997(+)^{*}$; Van Rijckeghemand Weder, $2001(+)^{*}$; Azfar and Nelson, $2007(+)^{*}$</li>
 </ul>
-<h2 id="Best-predictors-of-corruption">Best predictors of corruption<a class="anchor-link" href="#Best-predictors-of-corruption">&#182;</a></h2><p>In a "big data" study for 132 countries, Lima and Delen (2020) find that the 4 best variables predicting a country's corruption level are: Government Integrity, Property Rights, Judicial Effectiveness, and Education Index.</p>
-<ul>
-<li><p>Government Integrity scores on topics such as public trust in politicians, irregular payments, and transparency of government policy making are weighted equally, averaged, and computed. Resonating with the work of Gong (2015) and reflecting the common sense that government integrity is intimately related to corruption perceptions by citizens across countries.</p>
-</li>
-<li><p>Property Rights refers to the assessment of how a country's legal system permits individuals or organizations to accumulate private property without restrictions and protection of clear laws. In other words, it measures the extent to which a country's laws secure private property rights (e.g., physical property rights, strength of investor protection, and risk of expropriation). Lima and Delen's results are consistent with the extant literature that suggests the influence of property rights on corruption. For example, Acemoglu and Verdier (1998) infer that the enforcement of property rights by the government, if not accompanied by an effective judicial system, may actually foster corruption. Angulo-Guerrero, Pérez-Moreno, and Abad- Guerrero (2017) suggest the beneficial effect of property rights on economies by exploring its positive influence on entrepreneurship motivation.</p>
-</li>
-<li><p>Judicial Effectiveness measures the extent to which a country's legal system secures citizens' and organizations' rights by ensuring that the law is fully respected with adequate legal procedures. The specific literature found evidence that unstable political environments with ineffective judicial systems may set the base for a rapid spread of bureaucratic corruption (Damania et al., 2004).</p>
-</li>
-<li><p>Education Index reflects the average of years of schooling of adults and probable years of schooling of children. . This, to some extent, resonates with the work of Glaeser and Saks (2006), who find that higher quality education is positively associated with lower levels of corruption.</p>
-</li>
-</ul>
-<p>Other factors and rank are presented in the figure below (Note: ASR is the Actual Splitting Rate in the random forest algorithm).</p>
-<center> <img src="ml_best_predictors.png" width="600" /> </center>
+
 </div>
 </div>
 </div>
@@ -13252,8 +13241,216 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Studies-and-methods-addressing-endogeneity-(for-SEM-phase)">Studies and methods addressing endogeneity (for SEM phase)<a class="anchor-link" href="#Studies-and-methods-addressing-endogeneity-(for-SEM-phase)">&#182;</a></h2><h3 id="Instrumental-variables">Instrumental variables<a class="anchor-link" href="#Instrumental-variables">&#182;</a></h3><h4 id="For-trade-openness">For trade openness<a class="anchor-link" href="#For-trade-openness">&#182;</a></h4><p><a href="https://www.hbs.edu/ris/Publication%20Files/Rents%20Competition%20and%20Corruption%20Di%20Tella%20Ades_84f3b2b5-c2a4-4438-92f4-be0b62e7bf12.pdf">Ades and Di Tella, 1997</a></p>
-<center> <img src="iv_trade.png" width="700" /> </center><p>From the foot notes: <em>"Regression (3) in Table 2 treats the Share of Imports in GDP as endogenous and uses the log of population and the log of land area as instruments. Our identifying assumptions are that these variables only affect corruption through their effect on the Share of Imports in GDP. We then tested these assumptions using Hausman tests of the overidentifying restrictions for the system of equations and could not reject the restrictions at conventional levels.</em></p>
+<h3 id="Statehood">Statehood<a class="anchor-link" href="#Statehood">&#182;</a></h3><h4 id="Definition?">Definition?<a class="anchor-link" href="#Definition?">&#182;</a></h4><p>TBD</p>
+<p>Possible overlap with existing literature (to be confirmed):</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Our study</th>
+<th style="text-align:left">Other lit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Government size</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Government structure</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Governmental system</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Political instability</td>
+</tr>
+<tr>
+<td style="text-align:left">EIU</td>
+<td style="text-align:left">Legal system</td>
+</tr>
+<tr>
+<td style="text-align:left">EIU</td>
+<td style="text-align:left">Property rights</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Effect-on-corruption">Effect on corruption<a class="anchor-link" href="#Effect-on-corruption">&#182;</a></h4><p><strong>Government size:</strong>
+One would expect that the larger the size of a government, the higher the levels of corruption. Typically,
+in larger governments, there is less individual accountability, more layers of bureaucracy, and more
+state intervention in the economy; all these factors would be expected to increase corruption. An early
+empirical study that used state-level data over the period 1983--1987 found that government size, in
+particular spending by state governments, had a significant influence on increasing corruption (Goel and
+Nelson, 1998). However, a later paper that used data from transition countries from 1998 to 2002 found
+that in fact larger governments reduced the levels of corruption (Goel and Budak, 2006). Similarly, another
+empirical study that used data sets from 100 countries over the time periods 1995–1997, 1998–2000, and
+2001–2003 found that larger governments in fact led to lower levels of corruption (Goel and Nelson,
+2010). Another study that uses data for both OECD and developing countries over the period 1996–2003
+however found there to be a strong causality between large governments and corruption (Arvate et al.,
+2010). In an attempt to explain these ambiguous results, a later study used annual data from 82 countries
+between 1995 and 1998 while controlling for the levels of democracy. It was found that size of government
+increases corruption when there are low levels of democracy and decreases corruption when there are
+high levels of democracy (Kotera et al., 2012).</p>
+<p><strong>Government structure:</strong>
+Theoretically, <strong>decentralization</strong> should reduce corruption. This is because decentralized governments
+increase competition between regions, mitigates government-induced distortions, and give individuals
+the option of changing district rather than engaging in corrupt practices. An early empirical study gave
+credence to this theory, finding that fiscal decentralization in government expenditure is strongly and
+significantly associated with lower corruption (Fisman and Gatti, 2002). This was supported by a later
+study that found there to be a negative relationship between decentralization and shadow economies and
+corruption (Dell’Anno and Teobaldelli, 2015). Other studies have looked beyond the relationship between
+fiscal decentralization and corruption to examine the effects of physical and political decentralization. A
+recent study observed that in countries with a larger number of governmental tiers, levels of corruption 
+were much higher. Additionally, larger subnational bureaucracies were found to be associated with greater
+corruption (Fan et al., 2009).</p>
+<p><strong>Government system:</strong>
+A democratic system should, in theory, produce lower levels of corruption. In a democracy, individuals
+must be re-elected, and it thus follows that if there are regular and fair elections, there should be a lower
+level of corruption due to this increased accountability. This relationship was found to be empirically
+true in a study that hypothesized corruption to be higher in countries with weaker democratic norms
+and institutions (Sandholtz and Koetzle, 2000). This was supported by a later study that observed that
+exposure tomedium- to long-term, uninterrupted democracywas associated with lower levels of corruption
+(Pellegrini and Gerlagh, 2008).</p>
+<p><strong>Political instability:</strong> 
+From a theoretical standpoint, there are two effects that are of note in this topic, as pointed out by
+Campante. The first is the horizon effect, where if an individual has low stability his short-term decision making
+horizon could increase the likelihood that he engages in corrupt behavior. On the other hand, some
+forms of corruption (e.g., infrastructure projects) require a large amount of time to complete, and thus
+only in extreme political stability (i.e., until the completion of the project) will there be a possibility for an
+incumbent and private sector to develop a corrupt relationship. The theory would thus suggest a U-shaped
+relationship between political stability and corruption. This theory was given some empirical support
+from an initial study that examined the role of political institutions and found that political stability is
+associated with lower corruption (Lederman et al., 2005). A later study, which exclusively examined
+the relationship between corruption indices and various measures of political stability found that, after
+controlling for the level of democracy, there was in fact a strong U-shaped relationship, as expected by
+the theory (Campante, 2009).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="EIU">EIU<a class="anchor-link" href="#EIU">&#182;</a></h3><h4 id="Definition?">Definition?<a class="anchor-link" href="#Definition?">&#182;</a></h4><p>TBD</p>
+<p>Possible overlap with existing literature:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Our study</th>
+<th style="text-align:left">Other lit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Government size</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Government structure</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Governmental system</td>
+</tr>
+<tr>
+<td style="text-align:left">Statehood</td>
+<td style="text-align:left">Political instability</td>
+</tr>
+<tr>
+<td style="text-align:left">EIU</td>
+<td style="text-align:left">Legal system</td>
+</tr>
+<tr>
+<td style="text-align:left">EIU</td>
+<td style="text-align:left">Property rights</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Effect-on-corruption">Effect on corruption<a class="anchor-link" href="#Effect-on-corruption">&#182;</a></h4><p><strong>Legal system:</strong> 
+Theoretically, it has been argued that the kind of legal code in a country will affect the quality of the
+government, which in turn affects the level of corruption. An initial empirical study found that countries
+with common law had lower levels of corruption (Treisman, 2000). However, an empirical study that
+aimed to determine the effects of common law on corruption found no significant relationship after
+controlling for other factors (Pellegrini and Gerlagh, 2008). A later study however found that using data
+from 100 countries in the time periods 1995–1997, 1998–2000, and 2001–2003, common law is in fact
+correlated with lower levels of corruption (Goel and Nelson, 2010).</p>
+<p><strong>Property rights:</strong>
+Lower levels of property rights are believed to increase the levels of corruption. This is because the lack
+of property rights constitutes a risk to individuals in the private sector, who are thus more likely to engage
+in corrupt behavior to mitigate or take advantage of such a risk. One of the initial studies that explored
+this relationship found that, following a general equilibrium model, less developed economies might opt
+for lower levels of property rights and higher levels of corruption (Acemoglu and Verdier, 1998). A later
+study provided more empirical evidence, finding that property rights protection contributes significantly
+to the reduction of corruption (Dong and Tongler, 2011).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Other-important-variables">Other important variables<a class="anchor-link" href="#Other-important-variables">&#182;</a></h2><h3 id="Intro">Intro<a class="anchor-link" href="#Intro">&#182;</a></h3><p>In a "big data" study for 132 countries, Lima and Delen (2020) find that the 4 best variables predicting a country's corruption level are: Government Integrity, Property Rights, Judicial Effectiveness, and Education Index.</p>
+<ul>
+<li><p>Government Integrity scores on topics such as public trust in politicians, irregular payments, and transparency of government policy making are weighted equally, averaged, and computed. Resonating with the work of Gong (2015) and reflecting the common sense that government integrity is intimately related to corruption perceptions by citizens across countries.</p>
+</li>
+<li><p>Property Rights refers to the assessment of how a country's legal system permits individuals or organizations to accumulate private property without restrictions and protection of clear laws. In other words, it measures the extent to which a country's laws secure private property rights (e.g., physical property rights, strength of investor protection, and risk of expropriation). Lima and Delen's results are consistent with the extant literature that suggests the influence of property rights on corruption. For example, Acemoglu and Verdier (1998) infer that the enforcement of property rights by the government, if not accompanied by an effective judicial system, may actually foster corruption. Angulo-Guerrero, Pérez-Moreno, and Abad- Guerrero (2017) suggest the beneficial effect of property rights on economies by exploring its positive influence on entrepreneurship motivation.</p>
+</li>
+<li><p>Judicial Effectiveness measures the extent to which a country's legal system secures citizens' and organizations' rights by ensuring that the law is fully respected with adequate legal procedures. The specific literature found evidence that unstable political environments with ineffective judicial systems may set the base for a rapid spread of bureaucratic corruption (Damania et al., 2004).</p>
+</li>
+<li><p>Education Index reflects the average of years of schooling of adults and probable years of schooling of children. . This, to some extent, resonates with the work of Glaeser and Saks (2006), who find that higher quality education is positively associated with lower levels of corruption.</p>
+</li>
+</ul>
+<p>Other factors and rank are presented in the figure below (Note: ASR is the Actual Splitting Rate in the random forest algorithm).</p>
+<center> <img src="ml_best_predictors.png" width="600" /> </center><p>While our 6 core variables subsume the top 4 predictors, two other important causes of corruption appearing in the literature are economic freedom and trade/globalization.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Economic-freedom">Economic freedom<a class="anchor-link" href="#Economic-freedom">&#182;</a></h3><p>High levels of economic freedom, or the freedom to choose how to produce, sell, and use your own
+resources, should in theory be associated with lower levels of corruption. With fewer economic controls,
+such as permit requirements, there is a lower chance that corrupt behavior is seen as necessary for
+engaging in business. This theory was supported by early empirical studies, which showed that increased
+economic freedom leads to lower corruption levels (Paldam, 2002). Later empirical studies also affirm
+this hypothesis; using data from the heritage foundation to measure economic freedom, it was found that
+there is a negative association between economic freedom and corruption (Saha et al., 2009).</p>
+<h3 id="Trade-(openness)-and-globalization">Trade (openness) and globalization<a class="anchor-link" href="#Trade-(openness)-and-globalization">&#182;</a></h3><p>Greater levels of openness and trade, or integration in the world economy should reduce the levels of
+corruption. That is because, as Sandholtz and Koetzle (2000) point out, greater integration could alter
+both the political–economic structure of the country and the cultural norms. In addition, increased levels
+of free trade would remove some administrative goods (such as licenses and permits) from bureaucratic
+monopolies, reducing the likelihood of corrupt behavior. This relationship received support from an
+empirical study, using data from 54 countries in 1996, that found both higher levels of state control
+in the economy and lower levels of integration in the world economy increase corruption (Sandholtz
+and Koetzle, 2000). This received further empirical support in 2006 when a paper using data from
+133 countries in 2003 found that both higher quality and higher levels of openness have a significant
+effect in reducing corruption (Gokcekus and Kn¨orich, 2006). A later study provided even more evidence
+by finding that the relationship between corruption and GNP per capita is strongly negatively correlated
+only in open economies (no relationship otherwise). This was an extremely robust relationship across
+different time periods and different country samples (Neeman et al., 2008).</p>
+<p>Theoretically it is believed that higher levels of globalization lead to reduced levels of corruption.
+As Charron points out growing interdependence amongst states, both politically through international
+organizations and socially through media should have an impact on spreading better quality of governments
+and anticorruption norms (Charron, 2009). Earlier empirical studies found this relationship to be true: in
+their study, Sandholtz and Koetzle found that the lower the degree of integration in the world economy,
+the higher the levels of corruption (Sandholtz and Koetzle, 2000). Later studies have questioned this
+relationship for countries of low income, in a study that uses cross-sectional data for 127 countries from
+the year 2006, no linear relationship is found between corruption and globalization for poor countries
+(Lalountas et al., 2011). However, when using an unbalanced panel of 102 countries over the period
+1995–2005, another study found that globalization was in fact a significant variable in reducing corruption
+particularly for developing countries (Badinger and Nindl, 2014). Both studies found the relationship to
+hold for developed economies.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Studies-and-methods-addressing-endogeneity-(for-SEM-phase)">Studies and methods addressing endogeneity (for SEM phase)<a class="anchor-link" href="#Studies-and-methods-addressing-endogeneity-(for-SEM-phase)">&#182;</a></h2><h3 id="Instrumental-variables">Instrumental variables<a class="anchor-link" href="#Instrumental-variables">&#182;</a></h3><h4 id="For-trade-openness-(share-of-imports)">For trade openness (share of imports)<a class="anchor-link" href="#For-trade-openness-(share-of-imports)">&#182;</a></h4><p><a href="https://www.hbs.edu/ris/Publication%20Files/Rents%20Competition%20and%20Corruption%20Di%20Tella%20Ades_84f3b2b5-c2a4-4438-92f4-be0b62e7bf12.pdf">Ades and Di Tella, 1997</a></p>
+<center> <img src="iv_trade.png" width="700" /> </center><p>From the footnotes: <em>"Regression (3) in Table 2 treats the Share of Imports in GDP as endogenous and uses the log of population and the log of land area as instruments. Our identifying assumptions are that these variables only affect corruption through their effect on the Share of Imports in GDP. We then tested these assumptions using Hausman tests of the overidentifying restrictions for the system of equations and could not reject the restrictions at conventional levels.</em></p>
 <p><em>The use of land area as an instrument can be justified theoretically by its relation to transport costs. In countries where domestic transport costs are high due to large land area, domestic producers can locate their manufacturing plants close to the markets they supply and enjoy a cost advantage over foreign producers, who must pay the cost of transport from the border to the market. The use of population size as an instrument is justified as a proxy for the realization of increasing returns through market size. There is a vast literature on the subject, reviewed in Dwight H. Perkins and Moshe Syrquin (1989)."</em></p>
 
 </div>

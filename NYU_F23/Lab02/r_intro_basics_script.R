@@ -1,8 +1,8 @@
 # Let's start by loading some data:
 
-mydata <- read.csv("https://wwwedu.github.io/NYU_F22/Lab02/introdata.csv")
+mydata <- read.csv("https://www747.github.io/NYU_F23/Lab02/introdata.csv")
 # Can also use '=' as assignment operator
-mydata = read.csv("https://wwwedu.github.io/NYU_F22/Lab02/introdata.csv")
+mydata = read.csv("https://www747.github.io/NYU_F23/Lab02/introdata.csv")
 
 # To view the data, we can use the environment viewer in RStudio or any of the following:
 
@@ -62,4 +62,4 @@ plot(x, y)
 # visualize our data see (https://www.autodesk.com/research/publications/same-stats-different-graphs)
 #
 # To view HTML version see here:
-# https://wwwedu.github.io/NYU_F22/Lab02/r_intro_basics.html
+# https://www747.github.io/NYU_F23/Lab02/r_intro_basics.html

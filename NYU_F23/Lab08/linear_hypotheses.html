@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 
@@ -13023,6 +13022,45 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13090,7 +13128,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "297.679px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "369.075px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13227,6 +13265,20 @@ F &amp;=\frac{W}{J} \frac{\sigma^{2}}{s^{2}} \\
 $$
 F[J, n-K \mid \mathbf{X}]=\frac{(\mathbf{R} \mathbf{b}-\mathbf{q})^{\prime}\left\{\mathbf{R}\left[s^{2}\left(\mathbf{X}^{\prime} \mathbf{X}\right)^{-1}\right] \mathbf{R}^{\prime}\right\}^{-1}(\mathbf{R} \mathbf{b}-\mathbf{q})}{J}
 $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Special-case-of-single-restriction-(t-test)">Special case of single restriction (t-test)<a class="anchor-link" href="#Special-case-of-single-restriction-(t-test)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>The relationship between a $t$-statistic and an $F$-statistic that has one degree of freedom in the numerator (i.e. one restriction) is:
 $$
 F_{(1, n-K))}=t_{(n-K)}^{2}
@@ -13239,7 +13291,19 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Restricted-vs.-unrestricted-regression-comparison">Restricted vs. unrestricted regression comparison<a class="anchor-link" href="#Restricted-vs.-unrestricted-regression-comparison">&#182;</a></h3><p>The preceding is a kind of postmortem examination because we try to find out whether the linear restriction is satisfied after estimating the "unrestricted" regression. A direct approach would be to incorporate the restriction into the estimating procedure at the outset.</p>
+<p>Per <a href="http://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf">Greene Appendix</a> the variance of the sum of two random variables is:</p>
+<center> <img src="image7.png" width="500" /> </center><p>Therefore,</p>
+\begin{aligned}
+t &amp;=\frac{\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)-\left(\beta_{2}+\beta_{3}\right)}{\operatorname{se}\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)} \\
+&amp;=\frac{\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)-1}{\sqrt{\operatorname{var}\left(\hat{\beta}_{2}\right)+\operatorname{var}\left(\hat{\beta}_{3}\right)+2 \operatorname{cov}\left(\hat{\beta}_{2} \hat{\beta}_{3}\right)}}
+\end{aligned}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparison-of-restricted-vs.-unrestricted-fit">Comparison of restricted vs. unrestricted fit<a class="anchor-link" href="#Comparison-of-restricted-vs.-unrestricted-fit">&#182;</a></h3><p>The preceding is a kind of postmortem examination because we try to find out whether the linear restriction is satisfied after estimating the "unrestricted" regression. A direct approach would be to incorporate the restriction into the estimating procedure at the outset.</p>
 <p>Alternatively,
 $$
 F[J, n-K \mid \mathbf{X}]=\frac{\left(\operatorname{RSS}_{R}-\operatorname{RSS}_{U R}\right) / J}{\operatorname{RSS}_{U R} /(n-K)}=\frac{\left(R_{U R}^{2}-R_{R}^{2}\right) / J}{\left(1-R_{U R}^{2}\right) /(n-K)}
@@ -13264,12 +13328,7 @@ $$
 \beta_{2}+\beta_{3}=1
 $$<p>which is an example of a linear equality restriction.
 How does one find out if there are constant returns to scale, that is, if the restriction is valid? There are two approaches.</p>
-<h3 id="Based-on-unrestricted-regression-estimation">Based on unrestricted regression estimation<a class="anchor-link" href="#Based-on-unrestricted-regression-estimation">&#182;</a></h3><p>Per <a href="http://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf">Greene Appendix</a> the variance of the sum of two random variables is:</p>
-<center> <img src="image7.png" width="500" /> </center><p>Therefore,</p>
-\begin{aligned}
-t &amp;=\frac{\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)-\left(\beta_{2}+\beta_{3}\right)}{\operatorname{se}\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)} \\
-&amp;=\frac{\left(\hat{\beta}_{2}+\hat{\beta}_{3}\right)-1}{\sqrt{\operatorname{var}\left(\hat{\beta}_{2}\right)+\operatorname{var}\left(\hat{\beta}_{3}\right)+2 \operatorname{cov}\left(\hat{\beta}_{2} \hat{\beta}_{3}\right)}}
-\end{aligned}<h4 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h4><p>Going back to the previous exercise, let's assume $y\equiv ln(GDP)$, $x_{2}\equiv ln(Labor)$, and $x_{3}\equiv ln(Capital)$ produces the following results:</p>
+<h3 id="Based-on-unrestricted-regression">Based on unrestricted regression<a class="anchor-link" href="#Based-on-unrestricted-regression">&#182;</a></h3><h4 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h4><p>Going back to the previous exercise, let's assume $y\equiv ln(GDP)$, $x_{2}\equiv ln(Labor)$, and $x_{3}\equiv ln(Capital)$ produces the following results:</p>
 $$
 \begin{array}{r}
 \hat{y}=4+0.4 x_{2}+0.9 x_{3}, R^{2}=8 / 60, \mathbf{e}^{\prime} \mathbf{e}=520, n=29, \\
@@ -13290,9 +13349,276 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Solution-using-t-test">Solution using t-test<a class="anchor-link" href="#Solution-using-t-test">&#182;</a></h5><p>[In class derivation]</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="General-restriction-matrix-solution">General restriction matrix solution<a class="anchor-link" href="#General-restriction-matrix-solution">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The restriction can be formulated as $R b=q$, where $R=(0,1,1), \beta=\left(\beta_{0}, \beta_{1}, \beta_{2}\right)^{\prime}$ and $\boldsymbol q=1$. Suppose that $m=R \beta-q$ then the variance of $m$ can be calculated as $\operatorname{Var}[m \mid X]=\sigma^{2} R\left(X^{\prime} X\right)^{-1} R^{\prime}$.</p>
+<p>Earlier we calculated $s^{2}$, the estimator of $\sigma^{2}$, as $\frac{e'e}{n-k}=520 / (29 - 3) =20$. So $\operatorname{Var}[m \mid X]$ can be calculated:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">s2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">520</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="m">29</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<span class="n">beta.hat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">0.4</span><span class="p">,</span><span class="w"> </span><span class="m">0.9</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+
+<span class="n">XpX</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="w"> </span><span class="m">29</span><span class="p">,</span><span class="w">  </span><span class="m">0</span><span class="p">,</span><span class="w">  </span><span class="m">0</span><span class="p">,</span>
+<span class="w">                  </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span>
+<span class="w">                  </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">),</span>
+<span class="w">                </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">T</span><span class="p">,</span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+
+<span class="n">XpX.inverse</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="n">XpX</span><span class="p">)</span>
+<span class="n">XpX.inverse</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table class="dataframe">
+<caption>A matrix: 3 × 3 of type dbl</caption>
+<tbody>
+	<tr><td>0.03448276</td><td> 0.000000000</td><td> 0.000000000</td></tr>
+	<tr><td>0.00000000</td><td> 0.020512821</td><td>-0.002564103</td></tr>
+	<tr><td>0.00000000</td><td>-0.002564103</td><td> 0.012820513</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">R</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="n">q</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span>
+
+<span class="n">m</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">beta.hat</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q</span>
+<span class="n">m.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">XpX.inverse</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="n">m.var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table class="dataframe">
+<caption>A matrix: 1 × 1 of type dbl</caption>
+<tbody>
+	<tr><td>0.5641026</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So $\operatorname{Var}[m \mid X]=\sigma^{2} R\left(X^{\prime} X\right)^{-1} R^{\prime}=0.564$. Suppose $W \equiv m^{\prime}(\operatorname{Var}[m \mid X])^{-1} m$, then $W$ follows $\mathrm{F}$ distribution with $J=1$ (the number of restrictions) and $n-K=26$ degrees of freedom.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">W</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">m.var</span><span class="o">^</span><span class="p">(</span><span class="m">-1</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">m</span>
+<span class="n">W</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table class="dataframe">
+<caption>A matrix: 1 × 1 of type dbl</caption>
+<tbody>
+	<tr><td>0.1595455</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">alpha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.05</span>
+<span class="n">n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">29</span>
+<span class="n">K</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">beta.hat</span><span class="p">)</span>
+<span class="n">J</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="c1"># 2 of the 3 betas allowed to vary;</span>
+<span class="n">CV</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qf</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">K</span><span class="p">)</span>
+
+<span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;The 95% critical value for a F-distribution with [&quot;</span><span class="p">,</span><span class="n">J</span><span class="p">,</span><span class="s">&quot;,&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="n">K</span><span class="p">,</span><span class="s">&quot;] degrees of freedom is&quot;</span><span class="p">)</span>
+<span class="nf">round</span><span class="p">(</span><span class="n">CV</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+'The 95% critical value for a F-distribution with [1,26] degrees of freedom is'
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+4.225
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note the relationship between $F_{1,df}$ and $t_{df}$ distributions:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;SQRT(W) : &quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">W</span><span class="o">^</span><span class="n">.</span><span class="m">5</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
+<span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;SQRT(CV): &quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">CV</span><span class="o">^</span><span class="n">.</span><span class="m">5</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+'SQRT(W) : 0.399'
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+'SQRT(CV): 2.056'
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Restricted-vs.-unrestricted-regression">Restricted vs. unrestricted regression<a class="anchor-link" href="#Restricted-vs.-unrestricted-regression">&#182;</a></h3><p>In the present example, this procedure can be done easily. We see that
 $\beta_{2}=1-\beta_{3}$ or $\beta_{3}=1-\beta_{2}$</p>
-<p>Therefore, using either of these equalities, we can eliminate one of the $\beta$ coefficients in and estimate the resulting equation. Thus we can write the Cobb-Douglas production function as</p>
+<p>Therefore, using either of these equalities, we can eliminate one of the $\beta$ coefficients in and estimate the resulting equation. Thus, if we use, we can write the Cobb-Douglas production function as</p>
 $$
 \begin{aligned}
 \ln Y_{i} &amp;=\beta_{0}+\left(1-\beta_{3}\right) \ln X_{2 i}+\beta_{3} \ln X_{3 i}+u_{i} \\
@@ -13305,7 +13631,14 @@ $$<p>or</p>
 $$
 \ln \left(Y_{i} / X_{2 i}\right)=\beta_{0}+\beta_{3} \ln \left(X_{3 i} / X_{2 i}\right)+u_{i}
 $$<p>where $\left(Y_{i} / X_{2 i}\right)=$ output/labor ratio and $\left(X_{3 i} / X_{2 i}\right)=$ capital labor ratio, quantities of great economic importance.</p>
-<h4 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h4><p>Let's assume that for a sample of $n=20$ observations we obtained the following estimates:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h4><p>Assume that for a sample of $n=20$ observations we obtained the following estimates:</p>
 <p>Unrestricted model:</p>
 \begin{aligned}
 \widehat{\mathrm{In} \mathrm{GDP}}_{t}=&amp; -1.6524 + 0.3397 \mathrm{ln} \text { Labor }_{t} + 0.8460 \mathrm{ln} \text { Capital } t_{t}\\
@@ -13319,7 +13652,7 @@ t=&amp;(-4.0612) \quad \quad \quad \quad (28.1056) \\
 p \text { value }=&amp;(0.00070) \quad \quad \quad \quad (0.0000) \\
 &amp;R_{\mathrm{R}}^{2}=0.9777 \quad \mathrm{RSS}_{\mathrm{R}}=0.0166
 \end{aligned}</p>
-<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 0$</p>
+<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$</p>
 
 </div>
 </div>

@@ -13309,6 +13309,12 @@ $$
 F[J, n-K \mid \mathbf{X}]=\frac{\left(\operatorname{RSS}_{R}-\operatorname{RSS}_{U R}\right) / J}{\operatorname{RSS}_{U R} /(n-K)}=\frac{\left(R_{U R}^{2}-R_{R}^{2}\right) / J}{\left(1-R_{U R}^{2}\right) /(n-K)}
 $$</p>
 <p>where $\mathrm{RSS}_{R}$ is the residual sum of squares of the restricted model (i.e. under the null hypothesis), and $\mathrm{RSS}_{U R}$ is the residual sum of squares of the unrestricted model (i.e. under the alternative hypothesis).</p>
+<p>So the F test checks:
+$$
+H_{0}: \text{The restricted model is better.} \\
+H_{1}: \text{The unrestricted model is better.}
+$$</p>
+<p>It is a one tailed test.</p>
 
 </div>
 </div>
@@ -13357,7 +13363,7 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="General-restriction-matrix-solution">General restriction matrix solution<a class="anchor-link" href="#General-restriction-matrix-solution">&#182;</a></h5>
+<h5 id="Solution-using-restriction-matrix">Solution using restriction matrix<a class="anchor-link" href="#Solution-using-restriction-matrix">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -13520,7 +13526,7 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 <span class="n">J</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w">  </span><span class="c1"># 2 of the 3 betas allowed to vary;</span>
 <span class="n">CV</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">qf</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">K</span><span class="p">)</span>
 
-<span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;The 95% critical value for a F-distribution with [&quot;</span><span class="p">,</span><span class="n">J</span><span class="p">,</span><span class="s">&quot;,&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="n">K</span><span class="p">,</span><span class="s">&quot;] degrees of freedom is&quot;</span><span class="p">)</span>
+<span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;The 95% critical value for a F-distribution with [&quot;</span><span class="p">,</span><span class="n">J</span><span class="p">,</span><span class="s">&quot; , &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="s">&quot;] degrees of freedom is&quot;</span><span class="p">)</span>
 <span class="nf">round</span><span class="p">(</span><span class="n">CV</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
 
@@ -13539,7 +13545,7 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 
 
 <div class="output_html rendered_html output_subarea ">
-'The 95% critical value for a F-distribution with [1,26] degrees of freedom is'
+'The 95% critical value for a F-distribution with [1 , 26] degrees of freedom is'
 </div>
 
 </div>
@@ -13559,6 +13565,14 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since the test value is less than the critical value, we cannot reject the null hypothesis (that the restricted model is better.)</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13612,6 +13626,14 @@ $$<p>Test $H_{0}: \beta_2 + \beta_3=1$ versus $H_{a}: \beta_2 + \beta_3 \neq 1$<
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>which match the t-test statistics from earlier.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">

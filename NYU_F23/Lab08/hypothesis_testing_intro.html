@@ -13022,6 +13022,45 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13089,7 +13128,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "292.679px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "292.675px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13105,7 +13144,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Dragos Ailoae</strong></p>
-<p>2023-11-01</p>
+<p>2022-11-02</p>
 <h1 id="Intro-to-Hypothesis-Testing"><center>Intro to Hypothesis Testing</center><a class="anchor-link" href="#Intro-to-Hypothesis-Testing">&#182;</a></h1>
 </div>
 </div>
@@ -13114,15 +13153,19 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Type-I-and-type-II-errors">Type I and type II errors<a class="anchor-link" href="#Type-I-and-type-II-errors">&#182;</a></h2><p>When we draw a conclusion from a significance test, we hope our conclusion will be correct. Because the sample is random, the test statistic, however defined, is also random. The same test procedure can lead to different conclusions in different samples. As such, there are two ways such a procedure can be in error: We can reject the null hypothesis when it's actually true, known as a Type I error, or we can fail to reject a false null hypothesis, which is a Type II error.</p>
-<h3 id="Definition:">Definition:<a class="anchor-link" href="#Definition:">&#182;</a></h3><p><strong>Type I error: Reject a true $H_{0}$</strong></p>
-<p><strong>Type II error: Fail to reject a false $H_{0}$.</strong></p>
+<h3 id="Definition">Definition<a class="anchor-link" href="#Definition">&#182;</a></h3><p>$\hspace{3cm}$ <strong>Type I error: Reject a true $H_{0}$</strong></p>
+<p>$\hspace{3cm}$ <strong>Type II error: Fail to reject a false $H_{0}$.</strong></p>
 <p>In other words, if we reject $H_{0}$ when $H_{0}$ is true, we have committed a Type I error. If we fail to reject $H_{0}$ when $H_{0}$ is false, we have committed a Type II error.</p>
-<h3 id="How-to-remember-which-is-which">How to remember which is which<a class="anchor-link" href="#How-to-remember-which-is-which">&#182;</a></h3><p>When testing:</p>
+<h3 id="The-confusion-matrix">The confusion matrix<a class="anchor-link" href="#The-confusion-matrix">&#182;</a></h3><center> <img src="image2.png" width="450" /> </center><h3 id="How-to-remember-which-is-which">How to remember which is which<a class="anchor-link" href="#How-to-remember-which-is-which">&#182;</a></h3><p>When testing:</p>
 <center>$\quad$ $H_0$: You are not pregnant</center>  
 <center>$H_a$: You are pregnant</center>  
 $\quad$
 $\quad$
-<center> <img src="image1.jfif" width="450" /> </center><p>In econometrics, the most common hypothesis test is whether a regression parameter is significantly different from 0 (i.e. does the independent variable have an effect on the dependent variable?).</p>
+<center> <img src="image1.jfif" width="450" /> </center>
+<!-- <center> <img src="image1b.jpg" width="450" /> </center> -->
+
+In econometrics, the most common hypothesis test is whether a regression parameter is significantly different from 0 (i.e. does the independent variable have an effect on the dependent variable?).
+
 <center>$H_0$: $\beta=0$ (Independent variable has no effect) </center>  
 <center>$H_a$: $\beta\neq 0$ (Independent variable has an effect)</center>
 </div>
@@ -13131,27 +13174,7 @@ $\quad$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Confusion-Matrix-and-Statistical-Power">The Confusion Matrix and Statistical Power<a class="anchor-link" href="#The-Confusion-Matrix-and-Statistical-Power">&#182;</a></h2><table>
-<thead><tr>
-<th style="text-align:center">Confusion Matrix</th>
-<th style="text-align:center">Power of a Test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><img src="image2.png" alt=""></td>
-<td style="text-align:center"><img src="image3.png" alt=""></td>
-</tr>
-</tbody>
-</table>
-$$
-\begin{aligned}
-&amp;\mathrm{Prob}(\text {Type I error})=\alpha \equiv \text{Size of the test}\\
-&amp;\mathrm{Prob}(\text {Type II error})=\beta = 1 \text { - Power }
-\end{aligned}
-$$<p>The <strong>power</strong> of a test is therefore the probability that it will correctly lead to rejection of a false null hypothesis:</p>
-<p>Let's say a pregnancy test checks for a hormone level (in blood or urine): if this level is over a certain threshold then we call it "Positive" for pregnancy. If we adjust the threshold $\alpha$ to the right we may reduce the probability of making a Type-I error (false positive) but increase the probability of Type-II errors (false negative).</p>
-<p>We can increase the power or the test by increasing the sample size which tightens the sample standard deviation</p>
+<h3 id="Other-error-types-(warning!-stats-humour)">Other error types (warning! stats humour)<a class="anchor-link" href="#Other-error-types-(warning!-stats-humour)">&#182;</a></h3><p><a href="https://xkcd.com/2303/">https://xkcd.com/2303/</a></p>
 
 </div>
 </div>
@@ -13159,6 +13182,15 @@ $$<p>The <strong>power</strong> of a test is therefore the probability that it w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Statistical-power">Statistical power<a class="anchor-link" href="#Statistical-power">&#182;</a></h2>$$
+\begin{aligned}
+&amp;\mathrm{Prob}(\text {Type I error})=\alpha \equiv \text{Size of the test}\\
+&amp;\mathrm{Prob}(\text {Type II error})=\beta = 1 \text { - Power }
+\end{aligned}
+$$<p>The <strong>power</strong> of a test is therefore the probability that it will correctly lead to rejection of a false null hypothesis.</p>
+<p><br /></p>
+<center> <img src="image3.png" width="450" /> </center><p>Let's assume that the pregnancy test measures the level of some hormone in the blood or urine sample; if this level is over a certain threshold then we call the test "Positive" for pregnancy. If we increase the threshold $\alpha$ we may reduce the probability of making a Type-I error (false positive) but we'll increase the probability of Type-II errors (false negative).</p>
+<p>We can increase the power or the test by increasing the sample size which tightens (more peaked) the sample distribution and therefore standard errors.</p>
 <table>
 <thead><tr>
 <th style="text-align:center">Original Comparison of Errors</th>
@@ -13172,15 +13204,7 @@ $$<p>The <strong>power</strong> of a test is therefore the probability that it w
 </tr>
 </tbody>
 </table>
-<p>Alternately we can use a higher powered test (i.e. test for some other hormone, ultrasound, etc.)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Other-error-types">Other error types<a class="anchor-link" href="#Other-error-types">&#182;</a></h2><p><a href="https://xkcd.com/2303/">https://xkcd.com/2303/</a></p>
+<p>Alternately we can use a higher powered test i.e. test for some other hormone, ultrasound, etc. Similarly, in statistics, different test statistics can lead to different power for the same data. The assumptions of the test, the nature of the data, and the true underlying relationships can all impact which test is more powerful. (e.g t-test vs. non-parametric rank sum test, Pearson vs. Spearman Rank Correlation, etc.)</p>
 
 </div>
 </div>
@@ -13189,7 +13213,7 @@ $$<p>The <strong>power</strong> of a test is therefore the probability that it w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Interpreting-confidence-intervals">Interpreting confidence intervals<a class="anchor-link" href="#Interpreting-confidence-intervals">&#182;</a></h2><p>0.5091 ± 0.0823</p>
-<p><strong>The interpretation of this confidence interval is:</strong> Given the confidence coefficient of 95%, in the long run, in 95 out of 100 cases intervals like $(0.4268,0.5914)$ will contain the true $\beta_{2} .$ But, as warned earlier, we cannot say that the probability is 95 percent that the specific interval (0.4268 to $0.5914)$ contains the true $\beta_{2}$ because this interval is now fixed and no longer random; therefore, $\beta_{2}$ either lies in it or does not: The probability that the specified fixed interval includes the true $\beta_{2}$ is therefore 1 or 0 .</p>
+<p><strong>The interpretation of this confidence interval is:</strong> Given the confidence coefficient of 95%, in the long run, in 95 out of 100 cases intervals like $(0.4268,0.5914)$ will contain the true $\beta_{2} .$ But, we cannot say that the probability is 95 percent that the specific interval (0.4268 to 0.5914) contains the true $\beta_{2}$ because this interval is now fixed and no longer random; therefore, $\beta_{2}$ either lies in it or does not: The probability that the specified fixed interval includes the true $\beta_{2}$ is therefore 1 or 0 .</p>
 
 </div>
 </div>
@@ -13218,7 +13242,7 @@ $$
 \end{array}
 \right]
 $$
-Test $H_{0}: \beta_1=0$ versus $H_{a}: \beta_1 \neq 0$</p>
+Under CLRM (classical linear regression model) assumptions, test $H_{0}: \beta_1=0$ versus $H_{a}: \beta_1 \neq 0$</p>
 
 </div>
 </div>

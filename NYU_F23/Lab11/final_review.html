@@ -13263,7 +13263,52 @@ $$<p>So the MLE for a Bernoulli distribution is the sample mean.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Bivariate-distributions">Bivariate distributions<a class="anchor-link" href="#Bivariate-distributions">&#182;</a></h4><p><a href="https://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf#page=68">Read Greene appendix sections B8 and B9.</a></p>
+<h4 id="Continuous-distribution;-univariate-normal">Continuous distribution; univariate normal<a class="anchor-link" href="#Continuous-distribution;-univariate-normal">&#182;</a></h4><p>Suppose we have 3 data points $-9,9.5,11$</p>
+<p>Assume they have been generated from a normal distribution</p>
+<p>Probability density of observing a single data point $x$, that is generated from a gaussian distribution is given by
+$$
+P(x ; \mu, \sigma)=\frac{1}{\sigma \sqrt{2 \pi}} e^{\left(-\frac{(x-\mu)^2}{2 \sigma^2}\right)}
+$$</p>
+<p>So in our example of data points 9, 9.5, 11 the probability density will be</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+P(9,9.5,11 ; \mu, \sigma)=\frac{1}{\sigma \sqrt{2 \pi}} e^{\left(-\frac{(9-\mu)^2}{2 \sigma^2}\right)} \times \frac{1}{\sigma \sqrt{2 \pi}} e^{\left(-\frac{(9.5-\mu)^2}{2 \sigma^2}\right)} \times \frac{1}{\sigma \sqrt{2 \pi}} e^{\left(-\frac{(11-\mu)^2}{2 \sigma^2}\right)}
+$$<p>If you are wondering why we have three components as product on the RHS just remember the assumption of MLE ; Total probability is equal to the product of individual marginal probabilities as data points are independently generated.</p>
+<p>In order to find the actual value of $\mu \&amp; \sigma$ we need to find the minima of the above equation i.e., differentiate with respect to $\mu \&amp; \sigma$ and then equate to 0 .</p>
+<p>In order to make the above job little easier we use the log transformation, thus introducing the idea of Log Likelihood.</p>
+<p>Now let's jump into actual calculation with log transformation,
+$$
+\begin{gathered}
+\ln (P(9,9.5,11 ; \mu, \sigma))=\ln \left(\frac{1}{\sigma \sqrt{2 \pi}}\right)\left(\frac{-(9-\mu)^2}{2 \sigma^2}\right)+\ln \left(\frac{1}{\sigma \sqrt{2 \pi}}\right)\left(\frac{-(9.5-\mu)^2}{2 \sigma^2}\right)+\ln \left(\frac{1}{\sigma \sqrt{2 \pi}}\right)\left(\frac{-(11-\mu)^2}{2 \sigma^2}\right) \\
+\ln (P(9,9.5,11 ; \mu, \sigma))=-3 \ln (\sigma)-\frac{3}{2} \ln (2 \pi)-\frac{1}{2 \sigma^2}\left[(9-\mu)^2+(9.5-\mu)^2+(11-\mu)^2\right]
+\end{gathered}
+$$</p>
+<p>Taking the partial derivative of the above equation w.r.t. $\mu$
+$$
+\frac{\partial \ln (P(9,9.5,11 ; \mu, \sigma))}{\partial \mu}=\frac{1}{\sigma^2}[9+9.5+11-3 \mu]=\frac{1}{\sigma^2}[29.5-3 \mu]
+$$</p>
+<p>In order to find the value of $\mu$ we $\mathbf{n}$
+$$
+\begin{gathered}
+\frac{1}{\sigma^2}(29.5-3 \mu)=0 \\
+\mu=9.833
+\end{gathered}
+$$</p>
+<p>Similarly, partial derivative w.r.t. $\sigma$ will give us the value of $\sigma$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bivariate-normal-distribution">Bivariate normal distribution<a class="anchor-link" href="#Bivariate-normal-distribution">&#182;</a></h4><p><a href="https://pages.stern.nyu.edu/~wgreene/Text/Greene-EA-7&amp;8ed-Appendices.pdf#page=68">Read Greene appendix sections B8 and B9.</a></p>
 <p>Key points (B-61): Joint distribution = conditional * marginal.
 $$
 f(x, y)=f(y \mid x) f_x(x)=f(x \mid y) f_y(y) .

@@ -13230,8 +13230,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Insights-from-the-two-equation-model">Insights from the two equation model<a class="anchor-link" href="#Insights-from-the-two-equation-model">&#182;</a></h2><h3 id="Matrix-notation">Matrix notation<a class="anchor-link" href="#Matrix-notation">&#182;</a></h3><p>For simplicity, let's begin by focusing on a two equation model. SUR can be employed if there are global or regional factors that might cause the error terms across countries to be correlated (e.g., global financial crises).</p>
-<p>Using the same notation as before, the two regression model looks as:</p>
+<h2 id="Insights-from-the-two-equation-model">Insights from the two equation model<a class="anchor-link" href="#Insights-from-the-two-equation-model">&#182;</a></h2><h3 id="Matrix-notation">Matrix notation<a class="anchor-link" href="#Matrix-notation">&#182;</a></h3><p>For simplicity, let's begin by focusing on a two equation model. Using the same notation as before, the two regression model looks as:</p>
 $$
 \begin{aligned}
 &amp;\mathbf{y}_{1}=\mathbf{X}_{1} \beta_{1}+\varepsilon_{1}, \text { and } \\
@@ -13240,12 +13239,12 @@ $$
 $$<p>each $\mathbf{X}$ matrix has $N$ (or $T$) rows.</p>
 <p><strong>NOTE: The number of explanatory variables may be different, hence $K_{1}$ and $K_{2}$ for the number of regressors, and coefficients in $\boldsymbol{\beta}_{1}$ and $\boldsymbol{\beta}_{2}$.</strong> For instance we may consider an analysis involving yearly economic growth across multiple countries over some time frame (i.e. 2011-2020).  We might have growth equations for each country that incorporate similar variables. For instance:</p>
 <ul>
-<li><p>Equation for Country 1: $Growth_1=\beta_{0,1}+\beta_{1,1} Investment_1+\beta_{2,1} Education_1+\epsilon_1$</p>
+<li><p>Equation for Country 1: $Growth_1=\beta_{0,1}+\beta_{1,1} Investment_1+\beta_{2,1} Education_1+\varepsilon_1$</p>
 </li>
-<li><p>Equation for Country 2: $Growth_2=\beta_{0,2}+\beta_{1,2} Investment_2+\beta_{2,2} Education_2+\beta_{3,2} Population_2+ \epsilon_2$</p>
+<li><p>Equation for Country 2: $Growth_2=\beta_{0,2}+\beta_{1,2} Investment_2+\beta_{2,2} Education_2+\beta_{3,2} Population_2+ \varepsilon_2$</p>
 </li>
 </ul>
-<p>Where, $Growth$ are the economic growth rates, $Investment$ are investment rates, $Education$ are measures of educational attainment, $Population$ are population growth rates, and $\epsilon$ the error terms.</p>
+<p>Where, $Growth$ are the economic growth rates, $Investment$ are investment rates, $Education$ are measures of educational attainment, $Population$ are population growth rates, and $\varepsilon$ the error terms. SUR can be employed if there are global or regional factors that might cause the error terms across countries to be correlated (e.g., global financial crises).</p>
 <p>In the SUR model then, the two disturbance vectors have classical properties</p>
 $$
 \begin{aligned}

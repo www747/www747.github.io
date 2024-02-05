@@ -13022,6 +13022,45 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13089,7 +13128,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "307.2px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13106,7 +13145,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Dragos Ailoae</strong></p>
 <p>Applied Statistics and Econometrics 2</p>
-<p>2023-02-06</p>
+<p>2024-02-05</p>
 <h1 id="Intro-to-Panel-Data-Analysis-with-R-"><center>Intro to Panel Data Analysis with R </center><a class="anchor-link" href="#Intro-to-Panel-Data-Analysis-with-R-">&#182;</a></h1><h1 id="The-SUR-Model"><center>The SUR Model</center><a class="anchor-link" href="#The-SUR-Model">&#182;</a></h1>
 </div>
 </div>
@@ -13151,14 +13190,14 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">ls</span><span class="p">())</span>    <span class="c1"># Removes all items in Environment!</span>
-<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">repr.plot.height</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span><span class="n">repr.plot.res</span> <span class="o">=</span> <span class="m">150</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">ls</span><span class="p">())</span><span class="w">    </span><span class="c1"># Removes all items in Environment!</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="n">repr.plot.res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">150</span><span class="p">)</span>
 
 <span class="c1"># LOAD PACKAGES:</span>
-<span class="n">packages</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;plm&quot;</span><span class="p">,</span><span class="s">&quot;systemfit&quot;</span><span class="p">,</span><span class="s">&quot;modelsummary&quot;</span><span class="p">)</span>
+<span class="n">packages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;plm&quot;</span><span class="p">,</span><span class="s">&quot;systemfit&quot;</span><span class="p">,</span><span class="s">&quot;modelsummary&quot;</span><span class="p">)</span>
 <span class="c1"># Loop though vector and load respective packages:</span>
-<span class="n">zzz</span> <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span> <span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">require</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> 
-               <span class="n">character.only</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">quietly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">warn.conflicts</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)))</span>  <span class="c1"># quiet no warnings</span>
+<span class="n">zzz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span><span class="w"> </span><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">require</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="n">character.only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)))</span><span class="w">  </span><span class="c1"># quiet no warnings</span>
 <span class="c1">#zzz &lt;- lapply(packages, require, character.only = TRUE) # verbose with warnings</span>
 </pre></div>
 
@@ -13172,7 +13211,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">my.raw.data</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="s">&quot;https://wwwedu.github.io/NYU_S23/Lab03/grun_data.csv&quot;</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">my.raw.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="s">&quot;https://www747.github.io/NYU_S24/Lab03/grun_data.csv&quot;</span><span class="p">))</span>
 <span class="n">my.raw.data</span>
 </pre></div>
 
@@ -13252,14 +13291,14 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Equation-by-equation-estimation-using-lm()">Equation by equation estimation using lm()<a class="anchor-link" href="#Equation-by-equation-estimation-using-lm()">&#182;</a></h2>
+<h2 id="Equation-by-equation-estimation-using-the-lm()-function">Equation by equation estimation using the <em>lm()</em> function<a class="anchor-link" href="#Equation-by-equation-estimation-using-the-lm()-function">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As a first step, we may want to fit the data for each firm using our old friend the lm() function. So let's break up the dataset into two separate subsets, one for DM and another for US.</p>
+<p>As a first step, we may want to fit the data for each firm using our old friend the lm() function. So let's break up the dataset into two separate subsets, one for Diamond Match and another for US Steel.</p>
 
 </div>
 </div>
@@ -13269,9 +13308,9 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">US.data</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span><span class="n">firm</span><span class="o">==</span><span class="s">&quot;US&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">US.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span><span class="n">firm</span><span class="o">==</span><span class="s">&quot;US&quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">US.data</span><span class="p">)</span>
-<span class="n">DM.data</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span><span class="n">firm</span><span class="o">==</span><span class="s">&quot;DM&quot;</span><span class="p">)</span>
+<span class="n">DM.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span><span class="n">firm</span><span class="o">==</span><span class="s">&quot;DM&quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">DM.data</span><span class="p">)</span>
 </pre></div>
 
@@ -13344,7 +13383,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can now fit the US data using lm():</p>
+<p>We can now fit the US Steel data using lm():</p>
 
 </div>
 </div>
@@ -13354,7 +13393,7 @@ $$</p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">lm.US</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">US.data</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">lm.US</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">US.data</span><span class="p">)</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">lm.US</span><span class="p">)</span>
 </pre></div>
 
@@ -13405,7 +13444,7 @@ F-statistic: 7.564 on 2 and 17 DF,  p-value: 0.00447
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And similarly for DM:</p>
+<p>And similarly for Diamond Match:</p>
 
 </div>
 </div>
@@ -13415,7 +13454,7 @@ F-statistic: 7.564 on 2 and 17 DF,  p-value: 0.00447
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">lm.DM</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">DM.data</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">lm.DM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">DM.data</span><span class="p">)</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">lm.DM</span><span class="p">)</span>
 </pre></div>
 
@@ -13484,19 +13523,19 @@ F-statistic: 15.32 on 2 and 17 DF,  p-value: 0.0001571
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span>
 
-<span class="n">r</span> <span class="o">&lt;-</span> <span class="n">lm.US</span><span class="o">$</span><span class="n">res</span>
-<span class="n">n</span><span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm.US</span><span class="o">$</span><span class="n">res</span>
+<span class="n">n</span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="c1"># add local polinomial trend</span>
-<span class="nf">lines</span><span class="p">(</span><span class="nf">predict</span><span class="p">(</span><span class="nf">loess</span><span class="p">(</span><span class="n">r</span><span class="o">~</span><span class="n">n</span><span class="p">)),</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="nf">predict</span><span class="p">(</span><span class="nf">loess</span><span class="p">(</span><span class="n">r</span><span class="o">~</span><span class="n">n</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 
-<span class="n">r</span> <span class="o">&lt;-</span> <span class="n">lm.DM</span><span class="o">$</span><span class="n">res</span>
-<span class="n">n</span><span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm.DM</span><span class="o">$</span><span class="n">res</span>
+<span class="n">n</span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="c1"># add local polinomial trend</span>
-<span class="nf">lines</span><span class="p">(</span><span class="nf">predict</span><span class="p">(</span><span class="nf">loess</span><span class="p">(</span><span class="n">r</span><span class="o">~</span><span class="n">n</span><span class="p">)),</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">lines</span><span class="p">(</span><span class="nf">predict</span><span class="p">(</span><span class="nf">loess</span><span class="p">(</span><span class="n">r</span><span class="o">~</span><span class="n">n</span><span class="p">)),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13555,7 +13594,7 @@ height=450
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">my.data</span> <span class="o">&lt;-</span> <span class="nf">pdata.frame</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;firm&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">))</span>  <span class="c1">#configure the data as a panel</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">my.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pdata.frame</span><span class="p">(</span><span class="n">my.raw.data</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;firm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">))</span><span class="w">  </span><span class="c1">#configure the data as a panel</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">my.data</span><span class="p">)</span>
 </pre></div>
 
@@ -13601,7 +13640,7 @@ height=450
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alternatives-to-lm()-for-equation-by-equation-estimation">Alternatives to lm() for equation by equation estimation<a class="anchor-link" href="#Alternatives-to-lm()-for-equation-by-equation-estimation">&#182;</a></h2>
+<h2 id="Alternatives-to-lm()-for-equation-by-equation-estimation">Alternatives to <em>lm()</em> for equation by equation estimation<a class="anchor-link" href="#Alternatives-to-lm()-for-equation-by-equation-estimation">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13618,7 +13657,7 @@ height=450
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">myOLS.pvcm</span> <span class="o">&lt;-</span> <span class="nf">pvcm</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">myOLS.pvcm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pvcm</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my.data</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">)</span>
 <span class="n">myOLS.pvcm</span>
 </pre></div>
 
@@ -13640,7 +13679,7 @@ height=450
 <div class="output_text output_subarea ">
 <pre>
 Model Formula: inv ~ val + cap
-&lt;environment: 0x0000000041cf9b00&gt;
+&lt;environment: 0x0000000016952508&gt;
 
 Coefficients:
    (Intercept)       val     cap
@@ -13668,7 +13707,7 @@ US   -49.19832 0.1748560 0.38964
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">myOLS.sysfit</span> <span class="o">&lt;-</span> <span class="nf">systemfit</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;OLS&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">myOLS.sysfit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">systemfit</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;OLS&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my.data</span><span class="p">)</span>
 <span class="c1"># summary(myOLS.sysfit)$coeff</span>
 <span class="nf">get_estimates</span><span class="p">(</span><span class="n">myOLS.sysfit</span><span class="p">)</span>
 </pre></div>
@@ -13689,18 +13728,18 @@ US   -49.19832 0.1748560 0.38964
 
 <div class="output_html rendered_html output_subarea ">
 <table class="dataframe">
-<caption>A data.frame: 6 × 11</caption>
+<caption>A data.frame: 6 × 12</caption>
 <thead>
-	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>component</th><th scope=col>group</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>component</th><th scope=col>s.value</th><th scope=col>group</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>(Intercept)</td><td>  0.161518567</td><td>  2.06556414</td><td>0.95</td><td>  -4.19644084</td><td>  4.51947797</td><td> 0.07819586</td><td>17</td><td>9.385853e-01</td><td>DM</td><td></td></tr>
-	<tr><td>val        </td><td>  0.004573432</td><td>  0.02716079</td><td>0.95</td><td>  -0.05273082</td><td>  0.06187768</td><td> 0.16838365</td><td>17</td><td>8.682686e-01</td><td>DM</td><td></td></tr>
-	<tr><td>cap        </td><td>  0.437369190</td><td>  0.07958891</td><td>0.95</td><td>   0.26945128</td><td>  0.60528710</td><td> 5.49535372</td><td>17</td><td>3.940826e-05</td><td>DM</td><td></td></tr>
-	<tr><td>(Intercept)</td><td>-49.198321862</td><td>148.07536507</td><td>0.95</td><td>-361.61003378</td><td>263.21339006</td><td>-0.33225190</td><td>17</td><td>7.437606e-01</td><td>US</td><td></td></tr>
-	<tr><td>val        </td><td>  0.174856015</td><td>  0.07419805</td><td>0.95</td><td>   0.01831182</td><td>  0.33140021</td><td> 2.35661209</td><td>17</td><td>3.069905e-02</td><td>US</td><td></td></tr>
-	<tr><td>cap        </td><td>  0.389641889</td><td>  0.14236688</td><td>0.95</td><td>   0.08927403</td><td>  0.69000974</td><td> 2.73688583</td><td>17</td><td>1.404874e-02</td><td>US</td><td></td></tr>
+	<tr><td>(Intercept)</td><td>  0.161518567</td><td>  2.06556414</td><td>0.95</td><td>  -4.19644084</td><td>  4.51947797</td><td> 0.07819586</td><td>17</td><td>9.385853e-01</td><td>DM</td><td>0.1 </td><td></td></tr>
+	<tr><td>val        </td><td>  0.004573432</td><td>  0.02716079</td><td>0.95</td><td>  -0.05273082</td><td>  0.06187768</td><td> 0.16838365</td><td>17</td><td>8.682686e-01</td><td>DM</td><td>0.2 </td><td></td></tr>
+	<tr><td>cap        </td><td>  0.437369190</td><td>  0.07958891</td><td>0.95</td><td>   0.26945128</td><td>  0.60528710</td><td> 5.49535372</td><td>17</td><td>3.940826e-05</td><td>DM</td><td>14.6</td><td></td></tr>
+	<tr><td>(Intercept)</td><td>-49.198321862</td><td>148.07536507</td><td>0.95</td><td>-361.61003378</td><td>263.21339006</td><td>-0.33225190</td><td>17</td><td>7.437606e-01</td><td>US</td><td>0.4 </td><td></td></tr>
+	<tr><td>val        </td><td>  0.174856015</td><td>  0.07419805</td><td>0.95</td><td>   0.01831182</td><td>  0.33140021</td><td> 2.35661209</td><td>17</td><td>3.069905e-02</td><td>US</td><td>5.0 </td><td></td></tr>
+	<tr><td>cap        </td><td>  0.389641889</td><td>  0.14236688</td><td>0.95</td><td>   0.08927403</td><td>  0.69000974</td><td> 2.73688583</td><td>17</td><td>1.404874e-02</td><td>US</td><td>6.2 </td><td></td></tr>
 </tbody>
 </table>
 
@@ -13722,16 +13761,16 @@ US   -49.19832 0.1748560 0.38964
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">X1</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">US.data</span><span class="o">$</span><span class="n">val</span><span class="p">,</span> <span class="n">US.data</span><span class="o">$</span><span class="n">cap</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>  <span class="c1">#top half of the matrix</span>
-<span class="n">X2</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span> <span class="n">DM.data</span><span class="o">$</span><span class="n">val</span><span class="p">,</span> <span class="n">DM.data</span><span class="o">$</span><span class="n">cap</span><span class="p">)</span>  <span class="c1">#bottom half</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">X1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cbind</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">US.data</span><span class="o">$</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">US.data</span><span class="o">$</span><span class="n">cap</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="w">  </span><span class="c1">#top half of the matrix</span>
+<span class="n">X2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cbind</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">DM.data</span><span class="o">$</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">DM.data</span><span class="o">$</span><span class="n">cap</span><span class="p">)</span><span class="w">  </span><span class="c1">#bottome half</span>
 
-<span class="n">X</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="n">X2</span><span class="p">)</span>                               <span class="c1">#bind the two halfs</span>
-<span class="n">y</span> <span class="o">&lt;-</span> <span class="n">my.raw.data</span><span class="o">$</span><span class="n">inv</span>                            <span class="c1">#y vector</span>
+<span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbind</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="n">X2</span><span class="p">)</span><span class="w">                               </span><span class="c1">#bind the two halfs</span>
+<span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">my.raw.data</span><span class="o">$</span><span class="n">inv</span><span class="w">                            </span><span class="c1">#y vector</span>
 
-<span class="n">betas.ols</span> <span class="o">&lt;-</span> <span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">y</span>
+<span class="n">betas.ols</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">y</span>
 <span class="n">betas.ols</span>
 </pre></div>
 
@@ -13882,9 +13921,9 @@ US   -49.19832 0.1748560 0.38964
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">N</span> <span class="o">&lt;-</span> <span class="nf">length</span><span class="p">(</span><span class="n">DM.data</span><span class="o">$</span><span class="n">inv</span><span class="p">)</span>
-<span class="n">sigma_hat</span> <span class="o">&lt;-</span> <span class="nf">summary</span><span class="p">(</span><span class="n">myOLS.sysfit</span><span class="p">)</span><span class="o">$</span><span class="n">residCov</span>
-<span class="n">omega_hat</span> <span class="o">&lt;-</span> <span class="n">sigma_hat</span> <span class="o">%x%</span> <span class="nf">diag</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="c1"># Kronecker product</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">N</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">DM.data</span><span class="o">$</span><span class="n">inv</span><span class="p">)</span>
+<span class="n">sigma_hat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">summary</span><span class="p">(</span><span class="n">myOLS.sysfit</span><span class="p">)</span><span class="o">$</span><span class="n">residCov</span>
+<span class="n">omega_hat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sigma_hat</span><span class="w"> </span><span class="o">%x%</span><span class="w"> </span><span class="nf">diag</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="c1"># Kronecker product</span>
 <span class="n">omega_hat</span>
 </pre></div>
 
@@ -13977,7 +14016,7 @@ US   -49.19832 0.1748560 0.38964
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">pcdtest</span><span class="p">(</span><span class="n">myOLS.pvcm</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;lm&quot;</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">pcdtest</span><span class="p">(</span><span class="n">myOLS.pvcm</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;lm&quot;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14016,7 +14055,7 @@ alternative hypothesis: cross-sectional dependence
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">pcdtest</span><span class="p">(</span><span class="n">myOLS.pvcm</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;cd&quot;</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">pcdtest</span><span class="p">(</span><span class="n">myOLS.pvcm</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;cd&quot;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14070,7 +14109,7 @@ alternative hypothesis: cross-sectional dependence
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">mySUR.sysfit</span> <span class="o">&lt;-</span> <span class="nf">systemfit</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&quot;SUR&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">mySUR.sysfit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">systemfit</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SUR&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my.data</span><span class="p">)</span>
 <span class="c1"># summary(mySUR.sysfit)$coeff</span>
 <span class="nf">get_estimates</span><span class="p">(</span><span class="n">mySUR.sysfit</span><span class="p">)</span>
 </pre></div>
@@ -14091,18 +14130,18 @@ alternative hypothesis: cross-sectional dependence
 
 <div class="output_html rendered_html output_subarea ">
 <table class="dataframe">
-<caption>A data.frame: 6 × 11</caption>
+<caption>A data.frame: 6 × 12</caption>
 <thead>
-	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>component</th><th scope=col>group</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>component</th><th scope=col>s.value</th><th scope=col>group</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>(Intercept)</td><td>  1.453986158</td><td>  1.55155893</td><td>0.95</td><td>  -1.81951703</td><td>  4.72748935</td><td> 0.9371131</td><td>17</td><td>3.618238e-01</td><td>DM</td><td></td></tr>
-	<tr><td>val        </td><td> -0.006542145</td><td>  0.02103408</td><td>0.95</td><td>  -0.05092018</td><td>  0.03783589</td><td>-0.3110259</td><td>17</td><td>7.595623e-01</td><td>DM</td><td></td></tr>
-	<tr><td>cap        </td><td>  0.352518606</td><td>  0.06886049</td><td>0.95</td><td>   0.20723566</td><td>  0.49780155</td><td> 5.1193157</td><td>17</td><td>8.543506e-05</td><td>DM</td><td></td></tr>
-	<tr><td>(Intercept)</td><td>-97.359988436</td><td>110.40031946</td><td>0.95</td><td>-330.28430222</td><td>135.56432535</td><td>-0.8818814</td><td>17</td><td>3.901401e-01</td><td>US</td><td></td></tr>
-	<tr><td>val        </td><td>  0.213114660</td><td>  0.05541765</td><td>0.95</td><td>   0.09619364</td><td>  0.33003568</td><td> 3.8456098</td><td>17</td><td>1.295969e-03</td><td>US</td><td></td></tr>
-	<tr><td>cap        </td><td>  0.297129690</td><td>  0.13053611</td><td>0.95</td><td>   0.02172256</td><td>  0.57253682</td><td> 2.2762259</td><td>17</td><td>3.605550e-02</td><td>US</td><td></td></tr>
+	<tr><td>(Intercept)</td><td>  1.453986158</td><td>  1.55155893</td><td>0.95</td><td>  -1.81951703</td><td>  4.72748935</td><td> 0.9371131</td><td>17</td><td>3.618238e-01</td><td>DM</td><td>1.5 </td><td></td></tr>
+	<tr><td>val        </td><td> -0.006542145</td><td>  0.02103408</td><td>0.95</td><td>  -0.05092018</td><td>  0.03783589</td><td>-0.3110259</td><td>17</td><td>7.595623e-01</td><td>DM</td><td>0.4 </td><td></td></tr>
+	<tr><td>cap        </td><td>  0.352518606</td><td>  0.06886049</td><td>0.95</td><td>   0.20723566</td><td>  0.49780155</td><td> 5.1193157</td><td>17</td><td>8.543506e-05</td><td>DM</td><td>13.5</td><td></td></tr>
+	<tr><td>(Intercept)</td><td>-97.359988436</td><td>110.40031946</td><td>0.95</td><td>-330.28430222</td><td>135.56432535</td><td>-0.8818814</td><td>17</td><td>3.901401e-01</td><td>US</td><td>1.4 </td><td></td></tr>
+	<tr><td>val        </td><td>  0.213114660</td><td>  0.05541765</td><td>0.95</td><td>   0.09619364</td><td>  0.33003568</td><td> 3.8456098</td><td>17</td><td>1.295969e-03</td><td>US</td><td>9.6 </td><td></td></tr>
+	<tr><td>cap        </td><td>  0.297129690</td><td>  0.13053611</td><td>0.95</td><td>   0.02172256</td><td>  0.57253682</td><td> 2.2762259</td><td>17</td><td>3.605550e-02</td><td>US</td><td>4.8 </td><td></td></tr>
 </tbody>
 </table>
 
@@ -14142,7 +14181,7 @@ alternative hypothesis: cross-sectional dependence
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">my.Pooled.model</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">inv</span> <span class="o">~</span> <span class="n">val</span> <span class="o">+</span> <span class="n">cap</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">my.data</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;pooling&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">my.Pooled.model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">inv</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cap</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my.data</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pooling&quot;</span><span class="p">)</span>
 <span class="nf">get_estimates</span><span class="p">(</span><span class="n">my.Pooled.model</span><span class="p">)</span>
 </pre></div>
 
@@ -14162,15 +14201,15 @@ alternative hypothesis: cross-sectional dependence
 
 <div class="output_html rendered_html output_subarea ">
 <table class="dataframe">
-<caption>A data.frame: 3 × 10</caption>
+<caption>A data.frame: 3 × 11</caption>
 <thead>
-	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>group</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>term</th><th scope=col>estimate</th><th scope=col>std.error</th><th scope=col>conf.level</th><th scope=col>conf.low</th><th scope=col>conf.high</th><th scope=col>statistic</th><th scope=col>df.error</th><th scope=col>p.value</th><th scope=col>s.value</th><th scope=col>group</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>(Intercept)</td><td>-11.1476225</td><td>15.01820589</td><td>0.95</td><td>-41.5773981</td><td>19.2821530</td><td>-0.7422739</td><td>37</td><td>4.626078e-01</td><td></td></tr>
-	<tr><td>val        </td><td>  0.1567845</td><td> 0.01773510</td><td>0.95</td><td>  0.1208498</td><td> 0.1927192</td><td> 8.8403488</td><td>37</td><td>1.180776e-10</td><td></td></tr>
-	<tr><td>cap        </td><td>  0.3842592</td><td> 0.09560581</td><td>0.95</td><td>  0.1905434</td><td> 0.5779750</td><td> 4.0192035</td><td>37</td><td>2.755406e-04</td><td></td></tr>
+	<tr><td>(Intercept)</td><td>-11.1476225</td><td>15.01820589</td><td>0.95</td><td>-41.5773981</td><td>19.2821530</td><td>-0.7422739</td><td>37</td><td>4.626078e-01</td><td>1.1 </td><td></td></tr>
+	<tr><td>val        </td><td>  0.1567845</td><td> 0.01773510</td><td>0.95</td><td>  0.1208498</td><td> 0.1927192</td><td> 8.8403488</td><td>37</td><td>1.180776e-10</td><td>33.0</td><td></td></tr>
+	<tr><td>cap        </td><td>  0.3842592</td><td> 0.09560581</td><td>0.95</td><td>  0.1905434</td><td> 0.5779750</td><td> 4.0192035</td><td>37</td><td>2.755406e-04</td><td>11.8</td><td></td></tr>
 </tbody>
 </table>
 
@@ -14187,7 +14226,7 @@ alternative hypothesis: cross-sectional dependence
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">pooltest</span><span class="p">(</span><span class="n">my.Pooled.model</span><span class="p">,</span> <span class="n">myOLS.pvcm</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">pooltest</span><span class="p">(</span><span class="n">my.Pooled.model</span><span class="p">,</span><span class="w"> </span><span class="n">myOLS.pvcm</span><span class="p">)</span>
 </pre></div>
 
     </div>

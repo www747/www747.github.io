@@ -13022,6 +13022,45 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
 
 
 <style type="text/css">
@@ -13089,7 +13128,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "279.027px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "279.025px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13125,13 +13164,13 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">ls</span><span class="p">())</span>    <span class="c1"># Removes all items in Environment!</span>
-<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span> <span class="n">repr.plot.height</span> <span class="o">=</span> <span class="m">6</span><span class="p">,</span><span class="n">repr.plot.res</span> <span class="o">=</span> <span class="m">150</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">ls</span><span class="p">())</span><span class="w">    </span><span class="c1"># Removes all items in Environment!</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="n">repr.plot.res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">150</span><span class="p">)</span>
 <span class="c1"># LOAD PACKAGES:</span>
-<span class="n">packages</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;plm&quot;</span><span class="p">,</span><span class="s">&quot;modelsummary&quot;</span><span class="p">,</span><span class="s">&quot;AER&quot;</span><span class="p">)</span>
+<span class="n">packages</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;plm&quot;</span><span class="p">,</span><span class="s">&quot;modelsummary&quot;</span><span class="p">,</span><span class="s">&quot;AER&quot;</span><span class="p">)</span>
 <span class="c1"># Loop though vector and load respective packages:</span>
-<span class="n">zzz</span> <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span> <span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">require</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span> 
-               <span class="n">character.only</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">quietly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">warn.conflicts</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)))</span>  <span class="c1"># quiet no warnings</span>
+<span class="n">zzz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">xxx</span><span class="p">)</span><span class="w"> </span><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">require</span><span class="p">(</span><span class="n">xxx</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="n">character.only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)))</span><span class="w">  </span><span class="c1"># quiet no warnings</span>
 </pre></div>
 
     </div>
@@ -13234,18 +13273,18 @@ $( document ).ready(function(){
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># define the fatality rate</span>
-<span class="n">Fatalities</span><span class="o">$</span><span class="n">fatal_rate</span> <span class="o">&lt;-</span> <span class="n">Fatalities</span><span class="o">$</span><span class="n">fatal</span> <span class="o">/</span> <span class="n">Fatalities</span><span class="o">$</span><span class="n">pop</span> <span class="o">*</span> <span class="m">10000</span>
+<span class="n">Fatalities</span><span class="o">$</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Fatalities</span><span class="o">$</span><span class="n">fatal</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Fatalities</span><span class="o">$</span><span class="n">pop</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">10000</span>
 
 <span class="c1"># subset the data</span>
-<span class="n">Fatalities1982</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span> <span class="n">year</span> <span class="o">==</span> <span class="s">&quot;1982&quot;</span><span class="p">)</span>
-<span class="n">Fatalities1988</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span> <span class="n">year</span> <span class="o">==</span> <span class="s">&quot;1988&quot;</span><span class="p">)</span>
+<span class="n">Fatalities1982</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1982&quot;</span><span class="p">)</span>
+<span class="n">Fatalities1988</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1988&quot;</span><span class="p">)</span>
 
 <span class="c1"># estimate simple regression models using 1982 and 1988 data</span>
-<span class="n">fatal1982_mod</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities1982</span><span class="p">)</span>
-<span class="n">fatal1988_mod</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities1988</span><span class="p">)</span>
+<span class="n">fatal1982_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1982</span><span class="p">)</span>
+<span class="n">fatal1988_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1988</span><span class="p">)</span>
 
 <span class="c1"># print summary using robust standard errors</span>
-<span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal1982_mod</span><span class="p">,</span> <span class="n">vcov</span> <span class="o">=</span> <span class="n">vcovHC</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;HC1&quot;</span><span class="p">)</span>
+<span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal1982_mod</span><span class="p">,</span><span class="w"> </span><span class="n">vcov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcovHC</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HC1&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13287,7 +13326,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># print summary using robust standard errors</span>
-<span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal1988_mod</span><span class="p">,</span> <span class="n">vcov</span> <span class="o">=</span> <span class="n">vcovHC</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;HC1&quot;</span><span class="p">)</span>
+<span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal1988_mod</span><span class="p">,</span><span class="w"> </span><span class="n">vcov</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vcovHC</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;HC1&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13343,26 +13382,26 @@ $$</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># plot the observations and add the estimated regression line for 1982 data</span>
-<span class="nf">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Fatalities1982</span><span class="o">$</span><span class="n">beertax</span><span class="p">,</span> 
-     <span class="n">y</span> <span class="o">=</span> <span class="n">Fatalities1982</span><span class="o">$</span><span class="n">fatal_rate</span><span class="p">,</span> 
-     <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;Beer tax (in 1988 dollars)&quot;</span><span class="p">,</span>
-     <span class="n">ylab</span> <span class="o">=</span> <span class="s">&quot;Fatality rate (fatalities per 10000)&quot;</span><span class="p">,</span>
-     <span class="n">main</span> <span class="o">=</span> <span class="s">&quot;Traffic Fatality Rates and Beer Taxes in 1982&quot;</span><span class="p">,</span>
-     <span class="n">ylim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">4.5</span><span class="p">),</span>
-     <span class="n">pch</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span> 
-     <span class="n">col</span> <span class="o">=</span> <span class="s">&quot;steelblue&quot;</span><span class="p">)</span>
-<span class="nf">abline</span><span class="p">(</span><span class="n">fatal1982_mod</span><span class="p">,</span> <span class="n">lwd</span> <span class="o">=</span> <span class="m">1.5</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1982</span><span class="o">$</span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1982</span><span class="o">$</span><span class="n">fatal_rate</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Beer tax (in 1988 dollars)&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fatality rate (fatalities per 10000)&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Traffic Fatality Rates and Beer Taxes in 1982&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">4.5</span><span class="p">),</span>
+<span class="w">     </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue&quot;</span><span class="p">)</span>
+<span class="nf">abline</span><span class="p">(</span><span class="n">fatal1982_mod</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span>
 <span class="c1"># plot observations and add estimated regression line for 1988 data</span>
-<span class="nf">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Fatalities1988</span><span class="o">$</span><span class="n">beertax</span><span class="p">,</span> 
-     <span class="n">y</span> <span class="o">=</span> <span class="n">Fatalities1988</span><span class="o">$</span><span class="n">fatal_rate</span><span class="p">,</span> 
-     <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;Beer tax (in 1988 dollars)&quot;</span><span class="p">,</span>
-     <span class="n">ylab</span> <span class="o">=</span> <span class="s">&quot;Fatality rate (fatalities per 10000)&quot;</span><span class="p">,</span>
-     <span class="n">main</span> <span class="o">=</span> <span class="s">&quot;Traffic Fatality Rates and Beer Taxes in 1988&quot;</span><span class="p">,</span>
-     <span class="n">ylim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">4.5</span><span class="p">),</span>
-     <span class="n">pch</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span> 
-     <span class="n">col</span> <span class="o">=</span> <span class="s">&quot;steelblue&quot;</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1988</span><span class="o">$</span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities1988</span><span class="o">$</span><span class="n">fatal_rate</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Beer tax (in 1988 dollars)&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fatality rate (fatalities per 10000)&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Traffic Fatality Rates and Beer Taxes in 1988&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">4.5</span><span class="p">),</span>
+<span class="w">     </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span>
+<span class="w">     </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;steelblue&quot;</span><span class="p">)</span>
 
-<span class="nf">abline</span><span class="p">(</span><span class="n">fatal1988_mod</span><span class="p">,</span> <span class="n">lwd</span> <span class="o">=</span> <span class="m">1.5</span><span class="p">)</span>
+<span class="nf">abline</span><span class="p">(</span><span class="n">fatal1988_mod</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13483,8 +13522,8 @@ We can simply use the function $\operatorname{lm}()$ to obtain an estimate of $\
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">fatal_fe_lm_mod</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">-</span> <span class="m">1</span><span class="p">,</span> 
-                      <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>  <span class="c1"># Note the -1 eliminates the constant to avoid perfect collinearity</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">fatal_fe_lm_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span><span class="w">  </span><span class="c1"># Note the -1 eliminates the constant to avoid perfect collinearity</span>
 <span class="n">fatal_fe_lm_mod</span>
 </pre></div>
 
@@ -13546,8 +13585,8 @@ statewy
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">r</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span>
-<span class="n">fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">r</span> <span class="o">~</span> <span class="m">1</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">5</span>
+<span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
 </pre></div>
 
@@ -13572,8 +13611,8 @@ Call:
 lm(formula = r ~ 1)
 
 Residuals:
- 1  2  3  4  5 
--2 -1  0  1  2 
+         1          2          3          4          5 
+-2.000e+00 -1.000e+00  8.289e-17  1.000e+00  2.000e+00 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)  
@@ -13694,11 +13733,11 @@ $$</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># obtain demeaned data</span>
-<span class="n">Fatalities_demeaned</span> <span class="o">&lt;-</span> <span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span>
-            <span class="nf">data.frame</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">=</span> <span class="n">fatal_rate</span> <span class="o">-</span> <span class="nf">ave</span><span class="p">(</span><span class="n">fatal_rate</span><span class="p">,</span> <span class="n">state</span><span class="p">),</span>
-            <span class="n">beertax</span> <span class="o">=</span> <span class="n">beertax</span> <span class="o">-</span> <span class="nf">ave</span><span class="p">(</span><span class="n">beertax</span><span class="p">,</span> <span class="n">state</span><span class="p">)))</span>
+<span class="n">Fatalities_demeaned</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span>
+<span class="w">            </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">ave</span><span class="p">(</span><span class="n">fatal_rate</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">),</span>
+<span class="w">            </span><span class="n">beertax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">ave</span><span class="p">(</span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">)))</span>
 <span class="c1"># estimate the regression</span>
-<span class="nf">summary</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities_demeaned</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities_demeaned</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13766,10 +13805,10 @@ F-statistic: 14.23 on 1 and 335 DF,  p-value: 0.0001913
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># estimate the fixed effects regression with plm()</span>
-<span class="n">fatal_fe_mod</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> 
-                    <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">,</span>
-                    <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span> 
-                    <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">)</span>
+<span class="n">fatal_fe_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                    </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">)</span>
 
 <span class="c1"># print summary using robust standard errors</span>
 <span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal_fe_mod</span><span class="p">)</span>
@@ -13849,7 +13888,7 @@ using both lm() and plm}(). It is straightforward to estimate this regression wi
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># estimate a combined time and entity fixed effects regression model</span>
 
 <span class="c1"># via lm()</span>
-<span class="n">fatal_tefe_lm_mod</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">year</span> <span class="o">-</span> <span class="m">1</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatal_tefe_lm_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 <span class="n">fatal_tefe_lm_mod</span>
 </pre></div>
 
@@ -13911,11 +13950,11 @@ Coefficients:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># via plm()</span>
-<span class="n">fatal_tefe_mod</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> 
-                      <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">,</span>
-                      <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span> 
-                      <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">,</span> 
-                      <span class="n">effect</span> <span class="o">=</span> <span class="s">&quot;twoways&quot;</span><span class="p">)</span>
+<span class="n">fatal_tefe_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twoways&quot;</span><span class="p">)</span>
 
 <span class="nf">coeftest</span><span class="p">(</span><span class="n">fatal_tefe_mod</span><span class="p">)</span>
 </pre></div>
@@ -14005,20 +14044,20 @@ These covariates are defined as follows:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># discretize the minimum legal drinking age</span>
-<span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span> <span class="o">&lt;-</span> <span class="nf">cut</span><span class="p">(</span><span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkage</span><span class="p">,</span>
-                            <span class="n">breaks</span> <span class="o">=</span> <span class="m">18</span><span class="o">:</span><span class="m">22</span><span class="p">,</span> 
-                            <span class="n">include.lowest</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
-                            <span class="n">right</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cut</span><span class="p">(</span><span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkage</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="o">:</span><span class="m">22</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                            </span><span class="n">include.lowest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                            </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 
 <span class="c1"># set minimum drinking age [21, 22] to be the baseline level</span>
-<span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span> <span class="o">&lt;-</span> <span class="nf">relevel</span><span class="p">(</span><span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span><span class="p">,</span> <span class="s">&quot;[21,22]&quot;</span><span class="p">)</span>
+<span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">relevel</span><span class="p">(</span><span class="n">Fatalities</span><span class="o">$</span><span class="n">drinkagec</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[21,22]&quot;</span><span class="p">)</span>
 
 <span class="c1"># mandadory jail or community service?</span>
-<span class="n">Fatalities</span><span class="o">$</span><span class="n">punish</span> <span class="o">&lt;-</span> <span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span> <span class="nf">factor</span><span class="p">(</span><span class="n">jail</span> <span class="o">==</span> <span class="s">&quot;yes&quot;</span> <span class="o">|</span> <span class="n">service</span> <span class="o">==</span> <span class="s">&quot;yes&quot;</span><span class="p">,</span> 
-                                             <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;no&quot;</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">)))</span>
+<span class="n">Fatalities</span><span class="o">$</span><span class="n">punish</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">jail</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                                             </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;no&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="p">)))</span>
 
 <span class="c1"># the set of observations on all variables for 1982 and 1988</span>
-<span class="n">Fatalities_1982_1988</span> <span class="o">&lt;-</span> <span class="n">Fatalities</span><span class="p">[</span><span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span> <span class="n">year</span> <span class="o">==</span> <span class="m">1982</span> <span class="o">|</span> <span class="n">year</span> <span class="o">==</span> <span class="m">1988</span><span class="p">),</span> <span class="p">]</span>
+<span class="n">Fatalities_1982_1988</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">[</span><span class="nf">with</span><span class="p">(</span><span class="n">Fatalities</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1982</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1988</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14040,38 +14079,38 @@ These covariates are defined as follows:</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># estimate all seven models</span>
-<span class="n">fatalities_mod1</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatalities_mod1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">fatalities_mod2</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span><span class="p">,</span>
-                       <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="s">&quot;year&quot;</span><span class="p">),</span>
-                       <span class="n">model</span><span class="o">=</span><span class="s">&#39;within&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatalities_mod2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">model</span><span class="o">=</span><span class="s">&#39;within&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">fatalities_mod3</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">year</span><span class="p">,</span>
-                       <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="s">&quot;year&quot;</span><span class="p">),</span>
-                       <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">,</span>
-                       <span class="n">effect</span> <span class="o">=</span> <span class="s">&quot;twoways&quot;</span><span class="p">,</span> 
-                       <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatalities_mod3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twoways&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                       </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">fatalities_mod4</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="n">drinkagec</span> 
-                       <span class="o">+</span> <span class="n">punish</span> <span class="o">+</span> <span class="n">miles</span> <span class="o">+</span> <span class="n">unemp</span> <span class="o">+</span> <span class="nf">log</span><span class="p">(</span><span class="n">income</span><span class="p">),</span> 
-                       <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span>
-                       <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">,</span>
-                       <span class="n">effect</span> <span class="o">=</span> <span class="s">&quot;twoways&quot;</span><span class="p">,</span>
-                       <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatalities_mod4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">drinkagec</span><span class="w"> </span>
+<span class="w">                       </span><span class="o">+</span><span class="w"> </span><span class="n">punish</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miles</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">unemp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">income</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                       </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twoways&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">fatalities_mod5</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="n">drinkagec</span> 
-                       <span class="o">+</span> <span class="n">punish</span> <span class="o">+</span> <span class="n">miles</span><span class="p">,</span>
-                       <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span>
-                       <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">,</span>
-                       <span class="n">effect</span> <span class="o">=</span> <span class="s">&quot;twoways&quot;</span><span class="p">,</span>
-                       <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">fatalities_mod5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">drinkagec</span><span class="w"> </span>
+<span class="w">                       </span><span class="o">+</span><span class="w"> </span><span class="n">punish</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miles</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twoways&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">fatalities_mod6</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span> <span class="o">+</span> <span class="n">state</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="n">drinkagec</span> 
-                       <span class="o">+</span> <span class="n">punish</span> <span class="o">+</span> <span class="n">miles</span> <span class="o">+</span> <span class="n">unemp</span> <span class="o">+</span> <span class="nf">log</span><span class="p">(</span><span class="n">income</span><span class="p">),</span> 
-                       <span class="n">index</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span>
-                       <span class="n">model</span> <span class="o">=</span> <span class="s">&quot;within&quot;</span><span class="p">,</span>
-                       <span class="n">effect</span> <span class="o">=</span> <span class="s">&quot;twoways&quot;</span><span class="p">,</span>
-                       <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities_1982_1988</span><span class="p">)</span>
+<span class="n">fatalities_mod6</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">drinkagec</span><span class="w"> </span>
+<span class="w">                       </span><span class="o">+</span><span class="w"> </span><span class="n">punish</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miles</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">unemp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="n">income</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                       </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">),</span>
+<span class="w">                       </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;twoways&quot;</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities_1982_1988</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14092,12 +14131,12 @@ These covariates are defined as follows:</p>
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">models</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">OLS</span> <span class="o">=</span> <span class="n">fatalities_mod1</span><span class="p">,</span> <span class="n">State.FE</span> <span class="o">=</span> <span class="n">fatalities_mod2</span><span class="p">,</span> <span class="n">TWFE</span> <span class="o">=</span> <span class="n">fatalities_mod3</span><span class="p">,</span> 
-               <span class="n">TWFE.Full</span> <span class="o">=</span> <span class="n">fatalities_mod4</span><span class="p">,</span> <span class="n">TWFE.No.Econ</span> <span class="o">=</span> <span class="n">fatalities_mod5</span><span class="p">,</span> <span class="n">TWFE.82.88</span> <span class="o">=</span> <span class="n">fatalities_mod6</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">models</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">OLS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod1</span><span class="p">,</span><span class="w"> </span><span class="n">State.FE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod2</span><span class="p">,</span><span class="w"> </span><span class="n">TWFE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod3</span><span class="p">,</span><span class="w"> </span>
+<span class="w">               </span><span class="n">TWFE.Full</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod4</span><span class="p">,</span><span class="w"> </span><span class="n">TWFE.No.Econ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod5</span><span class="p">,</span><span class="w"> </span><span class="n">TWFE.82.88</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fatalities_mod6</span><span class="p">)</span>
 
-<span class="nf">modelsummary</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;jupyter&quot;</span><span class="p">,</span>
-        <span class="n">stars</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
-        <span class="n">title</span> <span class="o">=</span><span class="s">&quot;Panel Regression Models of Traffic Fatalities due to Drunk Driving&quot;</span><span class="p">)</span>
+<span class="nf">modelsummary</span><span class="p">(</span><span class="n">models</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jupyter&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
+<span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Panel Regression Models of Traffic Fatalities due to Drunk Driving&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14283,13 +14322,13 @@ These covariates are defined as follows:</p>
    <td style="text-align:center;"> 0.996 </td>
   </tr>
   <tr>
-   <td style="text-align:left;box-shadow: 0px 1px">  </td>
-   <td style="text-align:center;box-shadow: 0px 1px">  </td>
-   <td style="text-align:center;box-shadow: 0px 1px">  </td>
-   <td style="text-align:center;box-shadow: 0px 1px">  </td>
-   <td style="text-align:center;box-shadow: 0px 1px"> (0.380) </td>
-   <td style="text-align:center;box-shadow: 0px 1px">  </td>
-   <td style="text-align:center;box-shadow: 0px 1px"> (0.715) </td>
+   <td style="text-align:left;box-shadow: 0px 1.5px">  </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px">  </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px">  </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px">  </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px"> (0.380) </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px">  </td>
+   <td style="text-align:center;box-shadow: 0px 1.5px"> (0.715) </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Num.Obs. </td>
@@ -14387,7 +14426,7 @@ These covariates are defined as follows:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Takeaways">Takeaways<a class="anchor-link" href="#Takaways">&#182;</a></h2><p>Considering (4), the fully saturated specification, as the baseline, we observe four interesting results:</p>
+<h2 id="Takaways-from-example-analysis">Takaways from example analysis<a class="anchor-link" href="#Takaways-from-example-analysis">&#182;</a></h2><p>Considering (4), the fully saturated specification, as the baseline, we observe four interesting results:</p>
 <ul>
 <li><strong>Including the covariates attenuates the magnitude of the estimated effect of the beertax but direction remains negative and statistically significant.</strong></li>
 <li><strong>The minimum legal drinking age does not have an effect on traffic fatalities: none of the three dummy variables are significantly different from zero at any common level of significance. Moreover, an $F$-Test of the joint hypothesis that all three coefficients are zero does not reject. The next code chunk shows how to test this hypothesis.</strong></li>
@@ -14403,8 +14442,8 @@ These covariates are defined as follows:</p>
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># test if legal drinking age has no explanatory power</span>
 <span class="nf">linearHypothesis</span><span class="p">(</span><span class="n">fatalities_mod4</span><span class="p">,</span>
-                 <span class="n">test</span> <span class="o">=</span> <span class="s">&quot;F&quot;</span><span class="p">,</span>
-                 <span class="nf">c</span><span class="p">(</span><span class="s">&quot;drinkagec[18,19)=0&quot;</span><span class="p">,</span> <span class="s">&quot;drinkagec[19,20)=0&quot;</span><span class="p">,</span> <span class="s">&quot;drinkagec[20,21)&quot;</span><span class="p">))</span>
+<span class="w">                 </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">,</span>
+<span class="w">                 </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;drinkagec[18,19)=0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drinkagec[19,20)=0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drinkagec[20,21)&quot;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14460,9 +14499,9 @@ These covariates are defined as follows:</p>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">linearHypothesis</span><span class="p">(</span><span class="n">fatalities_mod4</span><span class="p">,</span> 
-                 <span class="n">test</span> <span class="o">=</span> <span class="s">&quot;F&quot;</span><span class="p">,</span>
-                 <span class="nf">c</span><span class="p">(</span><span class="s">&quot;log(income)&quot;</span><span class="p">,</span> <span class="s">&quot;unemp&quot;</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">linearHypothesis</span><span class="p">(</span><span class="n">fatalities_mod4</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                 </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">,</span>
+<span class="w">                 </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;log(income)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;unemp&quot;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14517,14 +14556,80 @@ These covariates are defined as follows:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hausman-test:-fixed-effects-vs.-random-effects">Hausman test: fixed effects vs. random effects<a class="anchor-link" href="#Hausman-test:-fixed-effects-vs.-random-effects">&#182;</a></h2>
+<h2 id="Fixed-effects-vs.-random-effects-vs.-pooling">Fixed effects vs. random effects vs. pooling<a class="anchor-link" href="#Fixed-effects-vs.-random-effects-vs.-pooling">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To decide between fixed or random effects you can run a Hausman test where the null hypothesis is that the preferred model is random effects vs. the alternative the fixed effects (see Greene). It basically tests whether the unique errors ($u_i$) are correlated with the regressors, the null hypothesis is they are not.  Technically, the Hausman test null hypothesis is: "The random effects model is more efficient."</p>
+<p>Deciding between using fixed  or random effects not easy.  In the case you have covariates it is more intuitive: If we are truly convinced that the regressors and the fixed effect are correlated (i.e. the endogenous case), then we do not have much choice but to use the fixed effects estimator.</p>
+<p>But this has the disadvantages of a) not being able to estimate the coefficients on the time-invariant variables, and b) being inefficient if in fact the regressors and the fixed effect are not correlated.</p>
+<p>The main advantage of random effects over using OLS on a cross-section is that it is more efficient. But it does not address the endogeneity issue in any way.</p>
+<p>For more intuition of the  difference see <a href="https://stats.stackexchange.com/questions/4700/what-is-the-difference-between-fixed-effect-random-effect-and-mixed-effect-mode/4702#4702">this discussion</a>:</p>
+<p>"The most important practical difference between the two is this: Random effects are estimated with partial pooling, while fixed effects are not.</p>
+<p>Partial pooling means that, if you have few data points in a group, the group's effect estimate will be based partially on the more abundant data from other groups. This can be a nice compromise between estimating an effect by completely pooling all groups, which masks group-level variation, and estimating an effect for all groups completely separately, which could give poor estimates for low-sample groups.</p>
+<p>To motivate the random effects model, ask yourself: why would you partial pool? Probably because you think the little subgroups are part of some bigger group with a common mean effect. The subgroup means can deviate a bit from the big group mean, but not by an arbitrary amount. To formalize that idea, we posit that the deviations follow a distribution, typically Gaussian. That's where the "random" in random effects comes in: we're assuming the deviations of subgroups from a parent follow the distribution of a random variable.</p>
+<p>Suppose you want to estimate average US household income by ZIP code. You have a large dataset containing observations of households' incomes and ZIP codes. Some ZIP codes are well represented in the dataset, but others have only a couple households.</p>
+<p>For your initial model you would most likely take the mean income in each ZIP. This will work well when you have lots of data for a ZIP, but the estimates for your poorly sampled ZIPs will suffer from high variance. You can mitigate this by using a shrinkage estimator (aka partial pooling), which will push extreme values towards the mean income across all ZIP codes."</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fixed-vs.-pooled-(F-test)">Fixed vs. pooled (F test)<a class="anchor-link" href="#Fixed-vs.-pooled-(F-test)">&#182;</a></h3><p>To test the fixed effects vs. the pooled (simple OLS) model we check whether the fixed effects are jointly significant using an F test.  Here the null is: OLS better than fixed.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">fixed</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;within&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
+<span class="n">pooled</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;pooling&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
+
+<span class="nf">pFtest</span><span class="p">(</span><span class="n">fixed</span><span class="p">,</span><span class="w"> </span><span class="n">pooled</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+	F test for individual effects
+
+data:  fatal_rate ~ beertax
+F = 52.179, df1 = 47, df2 = 287, p-value &lt; 2.2e-16
+alternative hypothesis: significant effects
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fixed-vs.-random-effects-(Hausman-test)">Fixed vs. random effects (Hausman test)<a class="anchor-link" href="#Fixed-vs.-random-effects-(Hausman-test)">&#182;</a></h3><p>To decide between fixed or random effects you can run a Hausman test (AKA Durbin–Wu–Hausman aka DWH test) where the null hypothesis is that the preferred model is random effects vs. the alternative the fixed effects (see Greene). It basically tests whether the unique errors ($u_i$) are correlated with the regressors, the null hypothesis is they are not.  Technically, the Hausman test null hypothesis is: "The random effects model is more efficient."</p>
 
 </div>
 </div>
@@ -14534,10 +14639,10 @@ These covariates are defined as follows:</p>
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">fixed</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s">&quot;within&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">fixed</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="o">=</span><span class="s">&quot;within&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
 
-<span class="n">random</span> <span class="o">&lt;-</span> <span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span> <span class="o">~</span> <span class="n">beertax</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s">&quot;random&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">Fatalities</span><span class="p">)</span>
-<span class="nf">phtest</span><span class="p">(</span><span class="n">fixed</span><span class="p">,</span> <span class="n">random</span><span class="p">)</span>
+<span class="n">random</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="o">=</span><span class="s">&quot;random&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
+<span class="nf">phtest</span><span class="p">(</span><span class="n">fixed</span><span class="p">,</span><span class="w"> </span><span class="n">random</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14582,23 +14687,70 @@ alternative hypothesis: one model is inconsistent
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fixed-vs-random-effects-vs-pooling">Fixed vs random effects vs pooling<a class="anchor-link" href="#Fixed-vs-random-effects-vs-pooling">&#182;</a></h3><p>Deciding between using fixed  or random effects not easy.  In the case you have covariates it is more intuitive: If we are truly convinced that the regressors and the fixed effect are correlated (i.e. the endogenous case), then we do not have much choice but to use the fixed effects estimator.</p>
-<p>But this has the disadvantages of a) not being able to estimate the coefficients on the time-invariant variables, and b) being inefficient if in fact the regressors and the fixed effect are not correlated.</p>
-<p>The main advantage of random effects over using OLS on a cross-section is that it is more efficient. But it does not address the endogeneity issue in any way.</p>
-<p>For more intuition of the  difference see <a href="https://stats.stackexchange.com/questions/4700/what-is-the-difference-between-fixed-effect-random-effect-and-mixed-effect-mode/4702#4702">this discussion</a>:</p>
-<p>"The most important practical difference between the two is this: Random effects are estimated with partial pooling, while fixed effects are not.</p>
-<p>Partial pooling means that, if you have few data points in a group, the group's effect estimate will be based partially on the more abundant data from other groups. This can be a nice compromise between estimating an effect by completely pooling all groups, which masks group-level variation, and estimating an effect for all groups completely separately, which could give poor estimates for low-sample groups.</p>
-<p>To motivate the random effects model, ask yourself: why would you partial pool? Probably because you think the little subgroups are part of some bigger group with a common mean effect. The subgroup means can deviate a bit from the big group mean, but not by an arbitrary amount. To formalize that idea, we posit that the deviations follow a distribution, typically Gaussian. That's where the "random" in random effects comes in: we're assuming the deviations of subgroups from a parent follow the distribution of a random variable.</p>
-<p>Suppose you want to estimate average US household income by ZIP code. You have a large dataset containing observations of households' incomes and ZIP codes. Some ZIP codes are well represented in the dataset, but others have only a couple households.</p>
-<p>For your initial model you would most likely take the mean income in each ZIP. This will work well when you have lots of data for a ZIP, but the estimates for your poorly sampled ZIPs will suffer from high variance. You can mitigate this by using a shrinkage estimator (aka partial pooling), which will push extreme values towards the mean income across all ZIP codes."</p>
-
+<h3 id="Random-effects-vs.-pooled-(LM-test)">Random effects vs. pooled (LM test)<a class="anchor-link" href="#Random-effects-vs.-pooled-(LM-test)">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><p>We have not found evidence that severe punishments and increasing the minimum drinking age reduce traffic fatalities due to drunk driving. Nonetheless, there seems to be a negative effect of alcohol taxes on traffic fatalities which, however, is estimated imprecisely and cannot be interpreted as the causal effect of interest as there still may be a bias. The issue is that there may be omitted variables that differ across states and change over time and this bias remains even though we use a panel approach that controls for entity specific and time invariant unobservables.</p>
+<p>If the Hausman test had led us to chose a random effects model, we may also want to check if the pooling model (simple OLS) would not be more appropriate.  This can be done using an LM Breusch-Pagan test for random effects.  The null hypothesis in the LM test is that variances across entities is zero. That is, no significant difference across units i.e. no panel effect.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">pooled</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">plm</span><span class="p">(</span><span class="n">fatal_rate</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">beertax</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="o">=</span><span class="s">&quot;pooling&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fatalities</span><span class="p">)</span>
+
+<span class="nf">plmtest</span><span class="p">(</span><span class="n">pooled</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;bp&quot;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+	Lagrange Multiplier Test - (Breusch-Pagan)
+
+data:  fatal_rate ~ beertax
+chisq = 754.57, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: significant effects
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-more">For more<a class="anchor-link" href="#For-more">&#182;</a></h3><p>See also:</p>
+<ul>
+<li><a href="https://www.princeton.edu/~otorres/Panel101R.pdf">Oscar Torres-Reyna Panel 101</a></li>
+<li><p><a href="https://phantran.net/choosing-fixed-effects-random-effects-or-pooled-ols-models-in-panel-data-analysis-using-stata/">RE vs FE vs Pooling decision tree</a></p>
+</li>
+<li><p><a href="https://stats.stackexchange.com/questions/238214/how-exactly-does-a-random-effects-model-in-econometrics-relate-to-mixed-models">RE estimation: GLS vs ML</a></p>
+</li>
+</ul>
 
 </div>
 </div>

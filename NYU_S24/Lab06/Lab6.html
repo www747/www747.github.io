@@ -13155,7 +13155,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Serial-correlation-in-panels">Serial correlation in panels<a class="anchor-link" href="#Serial-correlation-in-panels">&#182;</a></h2><p>In the previous semester, we touched upon the topic of serial correlation, also referred to as autocorrelation, particularly within the framework of Generalized Least Squares (GLS). This was discussed in the context of non-spherical disturbances, as outlined in Professor Nandi's lecture notes, as well as our <a href="https://www747.github.io/NYU_F23/Lab10/reg_diagnostics_part_2.html">lab 10</a> focusing on regression diagnostics. Our understanding of this issue will deepen in the forthcoming lectures on time series analysis. However, as a preliminary introduction or preview, let's look at serial correlation within the realm of panel data analysis.</p>
 <p>Practically, serial correlation is not an issue for large N (small T) panels where practitioners generally rely on robust (clustered) standard errors.  Serial correlation is a more serious issue for large T (small N) type of models.</p>
-<p>If we we are concerned about misspecification however, we can use and autoregressive dynamic panel approach. <a href="https://doi.org/10.2307/2297968">Arellano and Bond (1991)</a> looked at dynamic autoregressive panel data models of type:
+<p>If we we are concerned about misspecification however, we can use a dynamic panel approach. <a href="https://doi.org/10.2307/2297968">Arellano and Bond (1991)</a> looked at dynamic autoregressive panel data models of type:
 $$
 y_{i t}=\sum_{j=1}^p \rho_j y_{i, t-j}+x_{i t}^{\top} \beta+u_{i t}, \quad u_{i t}=\alpha_i+\beta_t+\nu_{i t},
 $$</p>
